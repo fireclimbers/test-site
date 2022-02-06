@@ -1,0 +1,831 @@
+"use strict";
+
+var varArr = [];
+var cartlist = []; 
+var cartArray = [];
+var alldata = [];
+var uniqueEmployees = [];
+var newVar = [];
+var allProd = {};
+
+var scriptUrl = document.getElementById('Plugin_price').src
+var breakUrl = scriptUrl.split('apikey=')
+
+var apiKey = breakUrl[1]
+var  site_Key = '6LfCTtwZAAAAAOe8_WK3gJsYaP9_pkqMWKqUfXfN'
+var url = "https://api.superplasticsurgeons.com:9090/"
+var plugin__
+
+if(!window.jQuery){
+      var onloadCallback = function() {
+          console.log("jquey not present on load")
+    };
+    siteJqueryNotPresent()
+}else{
+      var onloadCallback = function() {
+    };
+     if (typeof jQuery != 'undefined') {  
+        // jQuery is loaded => print the version
+        var a = jQuery.fn.jquery
+        var b = a.split('.')
+        if(b[0] <= "2"){
+            siteJqueryNotPresent()
+        }else{
+            siteJqueryPresent()
+        }    
+    }
+}
+
+async function siteJqueryNotPresent(){
+    var script1 = await loadJS("https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+        if(script1){
+            plugin__ = jQuery.noConflict();
+            console.log('ho')
+            var link1 = await loadCss("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,300,400,500,600,700,800,900&display=swap")
+            var link2 = await loadCss("https://superplasticsurgeons.com/price-plugin/assets/css/style.css")
+            var script4 = await loadJS("https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit")
+
+            if(link1 && link2 && script4){
+                    await openSideBar();
+                    await appendHtml();
+                    await getModule();
+            }  
+        }
+}
+
+async function siteJqueryPresent(){
+        plugin__ = jQuery.noConflict();
+
+        var link1 = await loadCss("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,300,400,500,600,700,800,900&display=swap")
+        var link2 = await loadCss("https://superplasticsurgeons.com/price-plugin/assets/css/style.css")
+        var script3 = await loadJS("https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit")
+
+        if(link1 && link2 && script3){
+            await openSideBar();
+            await appendHtml();
+            await getModule();
+        }
+}
+
+
+async function loadJS(file) {
+    var result = new Promise((resolve,reject)=>{
+        
+        var jsElm = document.createElement("script");
+        jsElm.type = "application/javascript";
+        jsElm.src = file;
+        
+        // finally insert the element to the body element in order to load the script
+        jsElm.onload = function() {
+            resolve(true)
+        }
+        jsElm.onerror = function() {
+            console.log("js not loaded")
+            reject(false)
+        }
+        document.getElementsByTagName("head")[0].appendChild(jsElm)
+    })
+    return result
+}
+
+async function loadCss(filename){
+    var result = new Promise((resolve,reject)=>{
+        var fileref = document.createElement("link");
+        fileref.rel = "stylesheet";
+        fileref.type = "text/css";
+        fileref.href = filename;
+        fileref.onload = function() {
+            resolve(true)
+        }
+        fileref.onerror = function() {
+            console.log("css not loaded")
+            reject(false)
+        }
+        document.getElementsByTagName("head")[0].appendChild(fileref)
+    })
+    return result
+}
+
+
+async function appendHtml() {
+    plugin__("#priceSimulatorPlugin").append(
+        '<div id="ovr">' +
+        '<div class="price_animated p_s_w_p_wrap_p">' +
+        '<a  class="cd-nav-trigger" style="cursor:pointer" id="cdnav">' +
+        '<h4 class="price-custom-rotate p_s_w_p_tra">Request Quote Now</h4>' +
+        '</a>' +
+        '<form id="regForm" >' +
+        '<div id="cd-nav" class="cd-nav">' +
+        '<div class="cd-navigation-wrapper p_s_w_p_cd_nv_wpp">' +
+        '<div class="cd-half-block">' +
+        '<div id="sldr" class="price_silulator">' +
+        '<div class="p_s_w_p_hm_sl" id="first_p_s_w_p_u">' +
+        '<div class="p_s_w_p_close"><span onclick="closePSWP()" class="p_s_w_b_close_span"></span>' +
+        '</div>' +
+        '<div class="p_s_w_b_lis">' +
+        '<h6>My Procedure List</h6><i class="fa fa-shopping-cart"></i>' +
+        '<div id="p_s_w_p_bkt_list" class="p_s_w_count">0</div>' +
+        '</div>' +
+        '<div class="p_s_w_p_logo">' +
+        '<h3 style="font-size:20px">Request Quote Now</h3>' +
+        '<p>Get a Quote in an Instant!</p>' +
+        '</div>' +
+
+        '<div class="p_s_w_p_in_tabs">' +
+
+        '<input type="hidden" value="'+apiKey+'" id="simulator_user">' +
+        '<input type="hidden" value="'+site_Key+'" id="sitekey">' +
+        '<div class="flow_icons">' +
+        '<div class="icon_fst">1</div>' +
+        '<div class="icon_fst">2</div>' +
+        '<div class="icon_fst">3</div>' +
+        '<div class="icon_fst">4</div>' +
+        '</div>' +
+        '<div class="p_s_w_p_form">' +
+        '<label>Area of Interest</label>' +
+        '<select onchange="getProcedure()" id="area_interest_list" name="area-interest" title="Area of interest" required>' +
+        '<option value="">-- Select Option --</option>' +
+        '</select>' +
+        '</div>' +
+        '<div id="prod_cat" class="p_s_w_p_form">' +
+        '<label>Select Procedure Category</label>' +
+        '<select id="select_procedure" name="select-procedure" onchange="getProcedure()" data-placement="top" data-toggle="tooltip" title="Select Procedure Category">' +
+        '<option value="">-- Select Option --</option>' +
+        '<option value="surgical">Surgical</option>' +
+        '<option value="nonsurgical">Non Surgical</option>' +
+        '</select>' +
+        '</div>' +
+
+        '<div id="procd_list" class="accordians p_s_w_p_accor_i">' +
+        '<label id="prdocon">Select Procedure</label>' +
+        '<div class="bs-example" data-example-id="collapse-accordion">' +
+        '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '<div class="p_s_n_t_b_nxt" id="next">' +
+        '<input type="button" onclick="slideA()" value="Next">' +
+        '</div>' +
+        '<div class="p_s_w_p_f_text bottom_text">' +
+        '<p class="p_s_w_p_para">Powered by <span><a href="https://www.zendyhealth.com" target="_blank">ZendyHealth</a></span></p>' +
+        '</div>' +
+        '</div>' +
+
+        '<div class="p_s_w_p_hm_sl" id="scnd_p_s_w_p_u">' +
+        '<div class="p_s_w_p_close"><span onclick="closePSWP()" class="p_s_w_b_close_span"></span></div>' +
+        '<div class="p_s_w_b_lis">' +
+        '<h6>My Procedure List</h6><i class="fa fa-shopping-cart"></i>' +
+        '<div id="p_s_w_p_bkt_list" class="p_s_w_count">0</div>' +
+        '</div>' +
+        '<div class="p_s_w_p_logo">' +
+        '<h3 style="font-size:20px">Request Quote Now</h3>' +
+        '<p>Get a Quote in an Instant!</p>' +
+        '</div>' +
+        '<div class="p_s_w_p_in_tabs cust_by_kk">' +
+
+        '<div class="flow_icons second">' +
+        '<div class="icon_fst">1</div>' +
+        '<div class="icon_fst">2</div>' +
+        '<div class="icon_fst">3</div>' +
+        '<div class="icon_fst">4</div>' +
+        '</div>' +
+        '<div class="p_s_s_f_i">' +
+        '<label>First Name <i class="fa fa-asterisk"></i></label>' +
+        '<input type="text" name="fname" id="fname" autocomplete="off" placeholder="Enter your first name" required>' +
+        '<span id="show_error_firstname" class="error_sec"></span>' +
+        '</div>' +
+        '<div class="p_s_s_f_i">' +
+        '<label>Last Name <i class="fa fa-asterisk"></i></label>' +
+        '<input type="text" name="lname" id="lname" autocomplete="off" placeholder="Enter your last name" required>' +
+        '<span id="show_error_lastname" class="error_sec"></span>' +
+        '</div>' +
+        '<div class="p_s_s_f_i">' +
+        '<label>Email <i class="fa fa-asterisk"></i></label>' +
+        '<input type="text" name="email" id="email" autocomplete="off" placeholder="Enter your email" required>' +
+        '<span id="show_error_email" class="error_sec"></span>' +
+        '</div>' +
+
+        '<div class="p_s_s_f_i">' +
+        '<label>Phone <i class="fa fa-asterisk"></i></label>' +
+        '<input type="text" name="phone" id="phone" autocomplete="off" placeholder="(555) 555-5555" autocomplete="off" maxlength="10" required>' +
+        '<span id="show_error_phone" class="error_sec"></span>' +
+        '</div>' +
+        '<div class="p_s_s_f_i" name="gender" required>' +
+        '<label>Select Gender <i class="fa fa-asterisk"></i></label>' +
+        '<SELECT name="gender" id="gender" required>' +
+        '<OPTION value="">--Select Gender--</OPTION>' +
+        '<OPTION value="Male">Male</OPTION>' +
+        '<OPTION Value="Female">Female</OPTION>' +
+        '</SELECT>' +
+        '<span id="show_error_gender" class="error_sec"></span>' +
+        '</div>' +
+        '</div>' +
+        '<div id="show_error_ph" class="form-group"></div>' +
+        '<div class="p_s_n_t_b_nxt">' +
+        '<input type="button" value="Previous" onclick="slidePRviosfst()">' +
+        '<input type="button" onclick="slideAb()" value="Next">' +
+        '</div>' +
+        '<div class="p_s_w_p_f_text bottom_text">' +
+        '<p class="p_s_w_p_para">Powered by <span><a href="https://www.zendyhealth.com" target="_blank">ZendyHealth</a></span></p>' +
+        '</div>' +
+        '</div>' +
+
+
+        '<div class="fourth p_s_w_p_hm_sl" id="four_p_s_w_p_u">' +
+        '<div class="p_s_w_p_close"><span onclick="closePSWP()" class="p_s_w_b_close_span"></span></div>' +
+        '<div class="p_s_w_b_lis">' +
+        '<h6>My Procedure List</h6><i class="fa fa-shopping-cart"></i>' +
+        '<div id="p_s_w_p_bkt_list" class="p_s_w_count">0</div>' +
+        '</div>' +
+        '<div class="p_s_w_p_logo">' +
+        '<h3 style="font-size:20px">Request Quote Now</h3>' +
+        '<p>Get a Quote in an Instant!</p>' +
+        '</div>' +
+        '<div class="p_s_w_p_in_tabs">' +
+        '<div class="flow_icons">' +
+        '<div class="icon_fst">1</div>' +
+        '<div class="icon_fst">2</div>' +
+        '<div class="icon_fst">3</div>' +
+        '<div class="icon_fst">4</div>' +
+        '</div>' +
+
+        '<div class="Procedure_all p_s_w_p_pro_all">' +
+        '<h3>Procedure</h3>' +
+        '</div>' +
+        '<div class="second_error">' +
+        '<h5>.</h5>' +
+        '</div>' +
+        '<div class="p_s_w_p_pro_al_itm" id="all_item_details">' +
+        '</div>' +
+       
+        '<div class="p_s_n_t_b_nxt add_more_p_s">' +
+        '<input type="button" onclick="slideMain()" value="Add Another Procedure">' +
+        '</div>' +
+        
+        '<div class="captcha_values">' +
+        '<div id="recapcha_div" class="g-recaptcha"></div>'+
+        '</div>' +
+         '</div>' +
+        '<div id="cpatcha" class="capchea_sect p_s_n_t_b_nxt">' +
+        '<input type="button" value="Previous" onclick="slidePRvios()">' +
+        '<input type="button" id="submit_btn" onclick="slidefinish()" value="Submit">' +
+        '</div>' +
+        '<div class="p_s_w_p_ds">' +
+        '<h5>By submitting, you are agreeing to our <span><a target="_blank" href="https://zendyhealth.com/terms-of-use/">Terms of Use</a></span>.</h5>' +
+        '<span class="p_s_w_p_msg">Messaging and data rates may apply.</span>' +
+        '</div>' +
+        '<div class="p_s_w_p_f_text bottom_text">' +
+        '<p class="p_s_w_p_para">Powered by <span><a href="https://www.zendyhealth.com" target="_blank">ZendyHealth</a></span></p>' +
+        '</div>' +
+        '</div>' +
+
+        '<div class="third p_s_w_p_hm_sl">' +
+        '<div class="p_s_w_p_logo">' +
+        '<h3 style="font-size:20px">Request Quote Now</h3>' +
+        '<p>Get a Quote in an Instant!</p>' +
+        '</div>' +
+        '<div class="flow_icons">' +
+        '<div class="icon_fst">1</div>' +
+        '<div class="icon_fst">2</div>' +
+        '<div class="icon_fst">3</div>' +
+        '<div class="icon_fst">4</div>' +
+        '</div>' +
+        '<div class="thanks p_s_w_p_thank">' +
+        '<img class="p_s_w_p_thank_img" src="https://superplasticsurgeons.com/price-plugin/assets/images/thanks.png" alt="Thank you">' +
+        '<p class="p_s_w_p_title">Great choices!' + " We're working on your quote right now." +
+        '<br> Please check your email and look for a text on your phone to see your instant quote!' +
+        '</p>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</form>' +
+        '</div>' +
+        '</div>'
+    );
+}
+
+async function openSideBar() {
+    plugin__(document).ready(function() {
+        var isLateralNavAnimating = false;
+
+        plugin__(".cd-nav-trigger").click(function(event) {
+            plugin__("#regForm")[0].reset();
+            plugin__("#first_p_s_w_p_u").removeClass("wp_sim_homefirst");;
+            plugin__("#p_s_w_p_bkt_list").html(0);
+            plugin__('#next').empty();
+            plugin__('#procd_list').hide();
+            plugin__("#prod_cat").hide();
+
+            event.preventDefault();
+            //stop if nav animation is running 
+
+            if (!isLateralNavAnimating) {
+                if (plugin__(this).parents('.csstransitions').length > 0) isLateralNavAnimating = true;
+                plugin__('body').toggleClass('p_s_w_p_sl_opn');
+                if(!plugin__('body').hasClass('p_s_w_p_sl_opn')){
+				location.reload();
+			}
+                plugin__('.p_s_w_p_cd_nv_wpp').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+                    //animation is over
+                    isLateralNavAnimating = false;
+                });
+            }
+
+            slideMain();
+            if (plugin__("#ovr").hasClass("p_s_w_p_sl_opn")) {} else {
+                setTimeout(function() {
+                    plugin__('#site-content').attr('style', 'display: block !important');
+                    plugin__('#ovr').attr('style', 'overflow: auto !important');
+                }, 10);
+            }
+
+        });
+    });
+}
+
+
+async function getModule() {
+    plugin__(document).ready(function() {
+        plugin__('.second_error h5').css('display', 'none');
+        plugin__('#next').empty();
+        plugin__('#procd_list').hide();
+        plugin__("#prod_cat").hide();
+        plugin__.ajax({
+            url: url + "module",
+            type: "GET",
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('Accept', 'application/json');
+                xhr.setRequestHeader('api_key', apiKey);
+            },
+            success: function(data) {
+                plugin__("#area_interest_list").empty().append('<option value="">-- Select Option --</option>');
+                if (data.length > 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        plugin__("#area_interest_list").append('<option value="' + data[i].area_interest + '">' + data[i].category_name + '</option>');
+                    }
+                } else {
+                    plugin__('#area_interest_list').css('display', "none");
+                }
+            },
+            error: function(error) {
+                console.log("error==>", error)
+            }
+
+        })
+    })
+
+}
+
+function getProcedure() {
+  
+    var selectedAreaInterest = plugin__("select#area_interest_list").val();
+    var prcodeuretype = plugin__("select#select_procedure").val();
+    var length = plugin__('#select_gender').children('option').length;
+    var gender = plugin__("select#select_gender").val();
+    if (!gender || gender === "both") {
+        gender = "Both";
+    }
+    plugin__.ajax({
+        url: url + 'procedures',
+        type: 'GET',
+        dataType: 'json',
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader('area_interest', selectedAreaInterest);
+            xhr.setRequestHeader('gender', gender);
+            xhr.setRequestHeader('api_key', apiKey);
+            xhr.setRequestHeader('prcoedure_type', prcodeuretype);
+        },
+        success: function(data) {
+            alldata = data.response;
+            var values = alldata.map(function(entry) { return entry.type; });
+            const uniqueValues = [...new Set(values)];
+            if (uniqueValues.length === 1 && uniqueValues[0] === null) {
+                plugin__("#prod_cat").hide();
+            } else {
+                plugin__("#prod_cat").show();
+            }
+            plugin__("#accordion").empty();
+
+            if (data.response.length < 1) {
+                plugin__("#prdocon").hide();
+            } else {
+                plugin__("#prdocon").show();
+            }
+            if (data.status === 200) {
+                var prodDesc;
+                plugin__('#first_p_s_w_p_u').addClass('wp_sim_homefirst');
+                plugin__('#procd_list').show();
+                if (prcodeuretype) {
+
+                    var ij = [];
+                    for (var ik = 0; ik < data.response.length; ik++) {
+                        if (prcodeuretype === data.response[ik].type) {
+                            ij.push(ik);
+                            prodDesc = data.response[ik].prod_desc;
+                            if (!prodDesc) {
+                                prodDesc = data.response[ik].description;
+                            }
+                            plugin__("#accordion").append('<div id="' + data.response[ik].id + '-remove" class="panel panel-default"><div class="panel-heading" role="tab" id="heading' + ik + '"><h4  class="panel-title"> <span class="elips">' + data.response[ik].procedure_name + ' </span><span class="lrnmore">Learn More</span></h4> </div><div id="collapse' + ik + '" class="panel-collapse collapse"><div class="panel-body"> ' + prodDesc + '<button type="button" id="cartid-' + data.response[ik].id + '" onclick="addCart(this.id,' + data.response[ik].id + ')" class="btn addcart">Request Quote</button> </div></div> </div>');
+                        }
+                    }
+                    if (ij.length < 1) {
+                        plugin__("#prdocon").hide();
+                    } else {
+                        plugin__("#prdocon").show();
+                    }
+                } else {
+                    for (var i = 0; i < data.response.length; i++) {
+                        prodDesc = data.response[i].prod_desc;
+                        if (!prodDesc) {
+                            prodDesc = data.response[i].description;
+                        }
+                        plugin__("#accordion").append('<div id="' + data.response[i].id + '-remove" class="panel panel-default"><div class="panel-heading" role="tab" id="heading' + i + '"><h4 class="panel-title"><span class="elips">' + data.response[i].procedure_name + ' </span><span class="lrnmore">Learn More</span></h4> </div><div id="collapse' + i + '" class="panel-collapse collapse"><div class="panel-body"> ' + prodDesc + '<button type="button" id="cartid-' + data.response[i].id + '" onclick="addCart(this.id,' + data.response[i].id + ')" class="btn addcart">Request Quote</button> </div></div> </div>');
+
+                    }
+                }
+                plugin__("<script>plugin__('.panel-title').click(function(){if (!plugin__(this).hasClass('open')) {plugin__('.p_s_w_p_in_tabs').find('.panel-title.open').removeClass('open').parent().parent().find('.panel-collapse').slideToggle('slow');}plugin__(this).toggleClass('open').parent().parent().find('.panel-collapse').slideToggle('slow');if(plugin__('.panel-title').hasClass('open')){ plugin__('.p_s_w_p_in_tabs').animate({scrollTop: '+=130px'}, 800);}return;});</script>").appendTo(document.body);
+                var procedure = [],
+                    procedure_output = [],
+                    l = data.response.length,
+                    nn;
+                for (nn = 0; nn < l; nn++) {
+                    if (procedure[data.response[nn].type]) continue;
+                    procedure[data.response[nn].type] = true;
+                    procedure_output.push(data.response[nn].type);
+                }
+
+                if (uniqueEmployees.length > 0) {
+                    for (var ki = 0; ki < uniqueEmployees.length; ki++) {
+                        if (plugin__("#cartid-" + uniqueEmployees[ki].id).length) {
+                            plugin__("#" + uniqueEmployees[ki].id + "-remove h2").addClass("gry_color");
+                            plugin__("#cartid-" + uniqueEmployees[ki].id).html("Request Quote");
+                            plugin__("#cartid-" + uniqueEmployees[ki].id).attr("onclick", "addCart(this.id, " + uniqueEmployees[ki].id + ")");
+                        }
+                    }
+                }
+            } else if (data.status === 204) {
+                plugin__("#accordion").append('<li>No Data Found</li>');
+            }
+        }
+    });
+}
+
+
+function addCart(idval, data) {
+    var ch;
+    var selectedAreaInterest = plugin__("select#area_interest_list").val();
+    plugin__("#" + data + "-remove h2").addClass("gry_color");
+
+    cartlist.push(data);
+    if (cartlist.indexOf(data) != -1) {
+        varArr.push(data);
+    }
+
+    if (varArr.length > 0) {
+        for (ch = 0; ch < alldata.length; ch++) {
+            if (varArr.includes(alldata[ch].id)) {
+                cartArray.push({ 'name': alldata[ch].procedure_name, 'prodId': alldata[ch].surgery_name, 'id': alldata[ch].id, 'category_id': alldata[ch].area_interest, 'category_name': alldata[ch].cat_name })
+            }
+        }
+    }
+
+    var result = cartArray.reduce((unique, o) => {
+        if (!unique.some(obj => obj.id === o.id)) {
+            unique.push(o);
+        }
+        return unique;
+    }, []);
+    cartArray = result;
+    getUniqueVal(result, -1);
+    slideA();
+
+    if (varArr.length > 0) {
+        plugin__("#next").html('<input type="button" onclick="slideA()" value="Next">');
+    }
+}
+
+function getUniqueVal(arrayVal, removeId) {
+    arrayVal = arrayVal.filter(function(obj) {
+        return obj.id !== removeId;
+    });
+    cartArray = arrayVal;
+    uniqueEmployees = arrayVal;
+    plugin__("#ovr #p_s_w_p_bkt_list").html(uniqueEmployees.length);
+    plugin__("#ovr #scnd_p_s_w_p_u #p_s_w_p_bkt_list").html(uniqueEmployees.length);
+    plugin__("#ovr #four_p_s_w_p_u #p_s_w_p_bkt_list").html(uniqueEmployees.length);
+    nextSlideData();
+}
+
+function nextSlideData() {
+    var result = [];
+    var pushArr = [];
+    plugin__.each(uniqueEmployees, function(index, entry) {
+        if (!pushArr[entry.category_id]) {
+            pushArr[entry.category_id] = true;
+            result.push(entry.category_name);
+        }
+    });
+
+    plugin__('#ovr #all_item_details').html('<div class="all_items_total p_s_w_p_tol_item"><p>You have ' + uniqueEmployees.length + ' item in your Procedure list</p></div>');
+    if (uniqueEmployees.length > 0) {
+        if (uniqueEmployees.length > 1) {
+            plugin__('#ovr #all_item_details').html('<div class="all_items_total p_s_w_p_tol_item"><p>You have ' + uniqueEmployees.length + ' items in your Procedure list</p></div>');
+        }
+        if (result.length > 0) {
+            for (var lks = 0; lks < result.length; lks++) {
+                plugin__('#ovr #all_item_details').append('<div class="cartdata"> <div class="p_s_w_p_den_pcr"><p>' + result[lks] + '</p></div>');
+                for (var lk = 0; lk < uniqueEmployees.length; lk++) {
+                    if (result[lks] === uniqueEmployees[lk].category_name) {
+                        plugin__('#ovr #all_item_details').append('<div class="all_items"><span>' + uniqueEmployees[lk].name + '</span><button type="button" id="" onclick="removeCart(this.id, ' + uniqueEmployees[lk].id + ')" class="remove_item">Remove Item</button></div>');
+                    }
+                }
+                plugin__('#ovr #all_item_details').append('</div>');
+            }
+        }
+    }
+}
+
+function slideMain() {
+    plugin__('#sldr').css({
+        'transform': 'translatex(-0%)',
+    });
+}
+
+function removeCart(idval, data) {
+    if (confirm("Are you sure you want to remove this Procedure?")) {
+        // your deletion code
+        var selectedAreaInterest = plugin__("select#area_interest_list").val();
+        for (var i = 0; i < varArr.length; i++) {
+            if (varArr[i] === data) {
+                varArr.splice(i, 1);
+            }
+        }
+
+        for (var i = 0; i < cartlist.length; i++) {
+            if (cartlist[i] === data) {
+                cartlist.splice(i, 1);
+            }
+        }
+
+        var result = cartArray.reduce((unique, o) => {
+            if (!unique.some(obj => obj.id === o.id)) {
+                unique.push(o);
+            }
+            return unique;
+        }, []);
+        getUniqueVal(result, data);
+
+        if (varArr.length < 1) {
+            plugin__("#next").empty();
+        }
+        plugin__("#" + data + "-remove h2").removeClass("gry_color");
+        plugin__("#" + idval).html("Request Quote");
+        plugin__("#" + idval).attr("onclick", "addCart(this.id, " + data + ")");
+    }
+    return false;
+}
+
+function slideA() {
+    var NoOfProcedure = plugin__("#p_s_w_p_bkt_list").text()
+    if(NoOfProcedure > "0"){
+        plugin__('.second_error h5').html('');
+        plugin__('.second_error h5').css('display', 'none');
+    }
+    plugin__(".p_s_w_p_in_tabs").animate({ scrollTop: "0" });
+    plugin__('#sldr').css({
+        'transform': 'translatex(-25%)',
+    });
+    plugin__('.p_s_w_p_in_tabs').find('.panel-title.open').removeClass('open').parent().parent().find('.panel-collapse').slideToggle('slow');
+    plugin__(".p_s_w_p_in_tabs").animate({ scrollTop: "0" });
+    plugin__('body').addClass('p_s_w_p_body_class');
+     grecaptcha.render('recapcha_div', {
+        'sitekey' : site_Key
+      });
+    
+}
+
+function slidefinish() {
+    plugin__("#submit_btn").removeAttr("onclick");
+    submitform();
+}
+
+function slidePRviosfst() {
+    plugin__('#sldr').css({
+        'transform': 'translatex(0)',
+    });
+    plugin__("body").removeClass("p_s_w_p_body_class");
+}
+
+function slidePRvios() {
+	plugin__('#sldr').css({
+		'transform': 'translatex(-25%)',
+	});
+}
+
+function closePSWP() {
+    location.reload();
+    document.getElementById('cdnav').click()
+}
+
+function slideAb() {
+    var firstName_show_error = false
+    var lastName_show_error = false
+    var email_show_error = false
+    var gender_show_error = false
+    var phoneNo_show_error = false
+
+    var fnameValid = validateText(plugin__('#fname').val());
+    var lnameValid = validateText(plugin__('#lname').val());
+    var EmailValid = validateEmail(plugin__('#email').val());
+    var GenderValid = validateText(plugin__('#gender').val());
+    var phoneValid = validatePhone(plugin__('#phone').val());
+    var checkPhone = plugin__('#phone').val();
+    // var phoneValid = false;
+    // var phoneValid = validatePhone(checkPhone)
+    var lnmaeCheck = plugin__('#lname').val();
+    var fnmaeCheck = plugin__('#fname').val();
+    var EmailCheck = plugin__('#email').val();
+    var genderCheck = plugin__('#gender').val();
+    var len = Math.floor(Math.log10(checkPhone)) + 1;
+    
+    document.getElementById('phone').value = MakePhoneNumberMask(plugin__('#phone').val());
+
+    if (len > 7 && len < 10) {
+        phoneValid = true
+    }
+    
+    if (EmailValid && fnameValid && lnameValid && phoneValid && GenderValid) {
+        plugin__('#show_error_firstname').html("");
+        plugin__('#show_error_lastname').html("");
+        plugin__('#show_error_email').html("");
+        plugin__('#show_error_phone').html("");
+        plugin__('#show_error_gender').html("");
+        nextSlideData();
+        plugin__('#sldr').css({
+            'transform': 'translatex(-50%)',
+        });
+    } else {
+        if (!fnameValid) {
+            if (fnmaeCheck === "null" || fnmaeCheck === "") {
+                plugin__('#show_error_firstname').html("First name is required");
+            }else if( fnmaeCheck.length < 3){
+                 plugin__('#show_error_firstname').html("First name must not be less than 3 characters");
+            }else if( fnmaeCheck.length > 15){
+                 plugin__('#show_error_firstname').html("First name must not be greater than 15 characters");
+            }
+            else {
+                plugin__('#show_error_firstname').html("First name Value is not Valid");
+            }
+        } else {
+            plugin__('#show_error_firstname').html("");
+        }
+        if (!lnameValid) {
+            if (lnmaeCheck === "null" || lnmaeCheck === "") {
+                plugin__('#show_error_lastname').html("Last name is required");
+            }else if( lnmaeCheck.length < 3){
+                 plugin__('#show_error_lastname').html("Last name must not be less than 3 characters");
+            }else if( lnmaeCheck.length > 15){
+                 plugin__('#show_error_lastname').html("Last name must not be less than 3 characters");
+            }
+            else {
+                plugin__('#show_error_lastname').html("Last name Value is not Valid");
+            }
+        } else {
+            plugin__('#show_error_lastname').html("");
+        }
+        if (!EmailValid) {
+            if (EmailCheck === "null" || EmailCheck === "" || EmailCheck.length < 2) {
+                plugin__('#show_error_email').html("Email is required");
+            } else {
+                plugin__('#show_error_email').html("Email Value is not Valid");
+            }
+        } else {
+            plugin__('#show_error_email').html("");
+        }
+        if (!phoneValid) {
+            if (checkPhone === "null" || checkPhone === "" || len < 1) {
+                plugin__('#show_error_phone').html("Phone is required");
+            } else {
+                plugin__('#show_error_phone').html("Phone Value is not Valid");
+            }
+        } else {
+            plugin__('#show_error_phone').html("");
+        }
+        if (!GenderValid) {
+            if (genderCheck === "null" || genderCheck === "" || genderCheck.length < 2) {
+                plugin__('#show_error_gender').html("Gender is required");
+            } else {
+                plugin__('#show_error_gender').html("");
+            }
+        } else {
+            plugin__('#show_error_gender').html("");
+        }
+    }
+}
+
+function validateText(textField) {
+    var reg = /^([\s\.]?[a-zA-Z]+)+$/;
+
+    if (reg.test(textField) == false) {
+        return false;
+    }
+    if(textField.length < 3){
+        return false
+    }
+     if(textField.length > 15){
+        return false
+    }
+    return true;
+}
+
+function MakePhoneNumberMask(phone_number) {
+        phone_number = phone_number.replace(/\D/gi, '');
+        phone_number = phone_number.replace(/(\d{3})/, '$1-');
+        phone_number = phone_number.replace(/(\d{3})(\d{1})/, '$1-$2');
+        phone_number = phone_number.replace(/(\d{4})(\d{1})/, '$1-$2');
+        return phone_number
+    }
+
+function validateEmail(emailField) {
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+    if (reg.test(emailField) == false) {
+        return false;
+    }
+    return true;
+}
+
+function validatePhone(phonenumber) {
+    var reg = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/
+
+    if (reg.test(phonenumber) == false) {
+        return false;
+    }
+    return true;
+}
+
+
+function validate_recaptcha(recaptcha) {
+    plugin__.ajax({
+        type: "GET",
+        url: url+`validaterecapcha?token=${recaptcha}`,
+        contentType: 'application/x-www-form-urlencoded',
+        success: function(data) {
+         },
+        error:function(err){
+            plugin__('.second_error h5').html('Captcha Not verified!');
+            console.log("error = >",err)
+        }
+    });
+}
+
+function submitform() {
+    event.preventDefault();
+    grecaptcha.ready(function() {
+        var recaptcha = plugin__("#g-recaptcha-response").val();
+        if (recaptcha === "") {
+            plugin__("#submit_btn").attr("onclick", "slidefinish()");
+            plugin__("#cpatcha").removeClass("capchea_sect");
+            plugin__('.second_error h5').html('Captcha Required!');
+            plugin__('.second_error h5').css('display', 'block');
+        } else {
+            validate_recaptcha(recaptcha);
+            var data_user = [];
+            var data = plugin__('#regForm').serializeArray();
+            var formValPush = { "leads": data, "userdata": data_user, "formdata": uniqueEmployees };
+            plugin__.ajax({
+                url: url + 'leads',
+                type: 'POST',
+                dataType: 'json',
+                data: formValPush,
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader('api_key', plugin__('#simulator_user').val());
+                },
+                success: function(datas) {
+                    if (datas.error) {
+                        plugin__("#cpatcha").removeClass("capchea_sect");
+                        plugin__('.second_error h5').html(datas.error);
+                        plugin__('.second_error h5').css('display', 'block');
+                        plugin__("#submit_btn").attr("onclick", "slidefinish()");
+                        plugin__("body").removeClass("p_s_w_p_body_class");
+                         grecaptcha.reset()
+                    } else {
+                        plugin__("#submit_btn").removeAttr("onclick");
+                        plugin__("#regForm")[0].reset();
+                        plugin__('#sldr').css({
+                            'transform': 'translatex(-75%)',
+                        });
+                         grecaptcha.reset()
+                        setTimeout(function() {
+                            location.reload();
+                        }, 10000);
+                    }
+                }
+            });
+        }
+    });
+}

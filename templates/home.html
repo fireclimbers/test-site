@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://murrietafacialplasticsurgery.com/ -->
+<html lang="en" class="js js_active vc_desktop vc_transform vc_transform page-trans-loaded" style="--nectar-sticky-top-distance:341.556px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="./home/NRJS-72a0e076b7011f1c133"></script><script src="./home/nr-1215.min.js.download"></script><script type="text/javascript" async="" src="./home/recaptcha__en.js.download" crossorigin="anonymous" integrity="sha384-Ji02Q+HlDQMdIyq1cNkjB6QJX/pXe47Ws8fICRcxBJ4SR/sMTvGuJwgz8C+6Ff0R"></script><script type="text/javascript" async="" src="./home/analytics.js.download"></script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-72a0e076b7011f1c133",applicationID:"506423534"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><link rel="shortcut icon" href="https://480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/05/Asset-4.png"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v18.0 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Home - Murrieta Facial Plastic Surgery</title>
+	<link rel="canonical" href="https://murrietafacialplasticsurgery.com/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Home - Murrieta Facial Plastic Surgery">
+	<meta property="og:url" content="https://murrietafacialplasticsurgery.com/">
+	<meta property="og:site_name" content="Murrieta Facial Plastic Surgery">
+	<meta property="article:modified_time" content="2022-01-25T00:11:42+00:00">
+	<meta property="og:image" content="//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/05/Dr-Vishal-Banthia-Murrieta-Plastic-Surgery-Voted-Best-300x106.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="4 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":["Organization","Place","PlasticSurgery"],"@id":"https://murrietafacialplasticsurgery.com/#organization","name":"Murrieta Plastic Surgery","url":"https://murrietafacialplasticsurgery.com/","sameAs":[],"logo":{"@id":"https://murrietafacialplasticsurgery.com/#local-main-organization-logo"},"image":{"@id":"https://murrietafacialplasticsurgery.com/#local-main-organization-logo"},"address":{"@id":"https://murrietafacialplasticsurgery.com/#local-main-place-address"},"geo":{"@type":"GeoCoordinates","latitude":"33.5463852","longitude":"-117.1541816"},"telephone":["(951) 227-7772"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"17:00"}]},{"@type":"WebSite","@id":"https://murrietafacialplasticsurgery.com/#website","url":"https://murrietafacialplasticsurgery.com/","name":"Murrieta Facial Plastic Surgery","description":"","publisher":{"@id":"https://murrietafacialplasticsurgery.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://murrietafacialplasticsurgery.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en"},{"@type":"ImageObject","@id":"https://murrietafacialplasticsurgery.com/#primaryimage","inLanguage":"en","url":"//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/05/Dr-Vishal-Banthia-Murrieta-Plastic-Surgery-Voted-Best.jpg","contentUrl":"//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/05/Dr-Vishal-Banthia-Murrieta-Plastic-Surgery-Voted-Best.jpg","width":2244,"height":795},{"@type":"WebPage","@id":"https://murrietafacialplasticsurgery.com/#webpage","url":"https://murrietafacialplasticsurgery.com/","name":"Home - Murrieta Facial Plastic Surgery","isPartOf":{"@id":"https://murrietafacialplasticsurgery.com/#website"},"about":{"@id":"https://murrietafacialplasticsurgery.com/#organization"},"primaryImageOfPage":{"@id":"https://murrietafacialplasticsurgery.com/#primaryimage"},"datePublished":"2013-03-13T09:34:28+00:00","dateModified":"2022-01-25T00:11:42+00:00","breadcrumb":{"@id":"https://murrietafacialplasticsurgery.com/#breadcrumb"},"inLanguage":"en","potentialAction":[{"@type":"ReadAction","target":["https://murrietafacialplasticsurgery.com/"]}]},{"@type":"BreadcrumbList","@id":"https://murrietafacialplasticsurgery.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"PostalAddress","@id":"https://murrietafacialplasticsurgery.com/#local-main-place-address","streetAddress":"39755 Date St Suite 105","addressLocality":"Murrieta","postalCode":"92563","addressRegion":"CA","addressCountry":"US"},{"@type":"ImageObject","@id":"https://murrietafacialplasticsurgery.com/#local-main-organization-logo","inLanguage":"en","url":"//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/06/Asset-16@2x.png","contentUrl":"//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/06/Asset-16@2x.png","width":1010,"height":777,"caption":"Murrieta Plastic Surgery"}]}</script>
+	<meta name="geo.placename" content="Murrieta">
+	<meta name="geo.position" content="33.5463852;-117.1541816">
+	<meta name="geo.region" content="United States (US)">
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Murrieta Facial Plastic Surgery  » Feed" href="https://murrietafacialplasticsurgery.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Murrieta Facial Plastic Surgery  » Comments Feed" href="https://murrietafacialplasticsurgery.com/comments/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/murrietafacialplasticsurgery.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script><script src="./home/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./home/style.min.css" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel="stylesheet" id="bwg_fonts-css" href="./home/fonts.css" type="text/css" media="all">
+<link rel="stylesheet" id="sumoselect-css" href="./home/sumoselect.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="mCustomScrollbar-css" href="./home/jquery.mCustomScrollbar.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bwg_googlefonts-css" href="./home/css" type="text/css" media="all">
+<link rel="stylesheet" id="bwg_frontend-css" href="./home/styles.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="nectar-slider-css" href="./home/nectar-slider.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="./home/font-awesome-legacy.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="salient-grid-system-css" href="./home/grid-system.css" type="text/css" media="all">
+<link rel="stylesheet" id="main-styles-css" href="./home/style.css" type="text/css" media="all">
+<style id="main-styles-inline-css" type="text/css">
+html body[data-header-resize="1"] .container-wrap, html body[data-header-format="left-header"][data-header-resize="0"] .container-wrap, html body[data-header-resize="0"] .container-wrap, body[data-header-format="left-header"][data-header-resize="0"] .container-wrap { padding-top: 0; } .main-content > .row > #breadcrumbs.yoast { padding: 20px 0; }
+html:not(.page-trans-loaded) { background-color: #ffffff; }
+</style>
+<link rel="stylesheet" id="nectar-header-layout-centered-menu-under-logo-css" href="./home/header-layout-centered-menu-under-logo.css" type="text/css" media="all">
+<link rel="stylesheet" id="nectar-header-secondary-nav-css" href="./home/header-secondary-nav.css" type="text/css" media="all">
+<link rel="stylesheet" id="nectar-element-button-legacy-css" href="./home/element-button-legacy.css" type="text/css" media="all">
+<link rel="stylesheet" id="nectar_default_font_open_sans-css" href="./home/css(1)" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-css" href="./home/responsive.css" type="text/css" media="all">
+<link rel="stylesheet" id="skin-material-css" href="./home/skin-material.css" type="text/css" media="all">
+<link rel="stylesheet" id="salient-wp-menu-dynamic-css" href="./home/menu-dynamic.css" type="text/css" media="all">
+<link rel="stylesheet" id="js_composer_front-css" href="./home/js_composer.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="dynamic-css-css" href="./home/salient-dynamic-styles.css" type="text/css" media="all">
+<style id="dynamic-css-inline-css" type="text/css">
+@media only screen and (min-width:1000px){body #ajax-content-wrap.no-scroll{min-height:calc(100vh - 288px);height:calc(100vh - 288px)!important;}}@media only screen and (min-width:1000px){ #page-header-wrap.fullscreen-header,#page-header-wrap.fullscreen-header #page-header-bg,html:not(.nectar-box-roll-loaded) .nectar-box-roll > #page-header-bg.fullscreen-header,.nectar_fullscreen_zoom_recent_projects,#nectar_fullscreen_rows:not(.afterLoaded) > div{height:calc(100vh - 287px);}.wpb_row.vc_row-o-full-height.top-level,.wpb_row.vc_row-o-full-height.top-level > .col.span_12{min-height:calc(100vh - 287px);}html:not(.nectar-box-roll-loaded) .nectar-box-roll > #page-header-bg.fullscreen-header{top:288px;}.nectar-slider-wrap[data-fullscreen="true"]:not(.loaded),.nectar-slider-wrap[data-fullscreen="true"]:not(.loaded) .swiper-container{height:calc(100vh - 286px)!important;}.admin-bar .nectar-slider-wrap[data-fullscreen="true"]:not(.loaded),.admin-bar .nectar-slider-wrap[data-fullscreen="true"]:not(.loaded) .swiper-container{height:calc(100vh - 286px - 32px)!important;}}@media only screen and (max-width:999px){.using-mobile-browser #nectar_fullscreen_rows:not(.afterLoaded):not([data-mobile-disable="on"]) > div{height:calc(100vh - 126px);}.using-mobile-browser .wpb_row.vc_row-o-full-height.top-level,.using-mobile-browser .wpb_row.vc_row-o-full-height.top-level > .col.span_12,[data-permanent-transparent="1"].using-mobile-browser .wpb_row.vc_row-o-full-height.top-level,[data-permanent-transparent="1"].using-mobile-browser .wpb_row.vc_row-o-full-height.top-level > .col.span_12{min-height:calc(100vh - 126px);}html:not(.nectar-box-roll-loaded) .nectar-box-roll > #page-header-bg.fullscreen-header,.nectar_fullscreen_zoom_recent_projects,.nectar-slider-wrap[data-fullscreen="true"]:not(.loaded),.nectar-slider-wrap[data-fullscreen="true"]:not(.loaded) .swiper-container,#nectar_fullscreen_rows:not(.afterLoaded):not([data-mobile-disable="on"]) > div{height:calc(100vh - 73px);}.wpb_row.vc_row-o-full-height.top-level,.wpb_row.vc_row-o-full-height.top-level > .col.span_12{min-height:calc(100vh - 73px);}body[data-transparent-header="false"] #ajax-content-wrap.no-scroll{min-height:calc(100vh - 73px);height:calc(100vh - 73px);}}#nectar_fullscreen_rows > .wpb_row .full-page-inner-wrap{background-color:;}.col.padding-5-percent > .vc_column-inner,.col.padding-5-percent > .n-sticky > .vc_column-inner{padding:calc(600px * 0.06);}@media only screen and (max-width:690px){.col.padding-5-percent > .vc_column-inner,.col.padding-5-percent > .n-sticky > .vc_column-inner{padding:calc(100vw * 0.06);}}@media only screen and (min-width:1000px){.col.padding-5-percent > .vc_column-inner,.col.padding-5-percent > .n-sticky > .vc_column-inner{padding:calc((100vw - 180px) * 0.05);}.column_container:not(.vc_col-sm-12) .col.padding-5-percent > .vc_column-inner{padding:calc((100vw - 180px) * 0.025);}}@media only screen and (min-width:1425px){.col.padding-5-percent > .vc_column-inner{padding:calc(1245px * 0.05);}.column_container:not(.vc_col-sm-12) .col.padding-5-percent > .vc_column-inner{padding:calc(1245px * 0.025);}}.full-width-content .col.padding-5-percent > .vc_column-inner{padding:calc(100vw * 0.05);}@media only screen and (max-width:999px){.full-width-content .col.padding-5-percent > .vc_column-inner{padding:calc(100vw * 0.06);}}@media only screen and (min-width:1000px){.full-width-content .column_container:not(.vc_col-sm-12) .col.padding-5-percent > .vc_column-inner{padding:calc(100vw * 0.025);}}.img-with-aniamtion-wrap[data-border-radius="none"] .img-with-animation,.img-with-aniamtion-wrap[data-border-radius="none"] .hover-wrap{border-radius:none;}.nectar-button.medium{border-radius:3px 3px 3px 3px;padding:10px 15px;font-size:12px;color:#FFF;box-shadow:0 -2px rgba(0,0,0,0.1) inset;}.nectar-button.medium.see-through,.nectar-button.medium.see-through-2,.nectar-button.medium.see-through-3{padding-top:9px;padding-bottom:9px}.nectar-button.medium i.icon-button-arrow{font-size:16px}body[data-button-style^="rounded"] .nectar-button.medium:not(.see-through):not(.see-through-2):not(.see-through-3).has-icon,body[data-button-style^="rounded"] .nectar-button.medium:not(.see-through):not(.see-through-2):not(.see-through-3).tilt.has-icon{padding-left:42px;padding-right:42px}body[data-button-style^="rounded"] .nectar-button.medium:not(.see-through):not(.see-through-2):not(.see-through-3){padding:12px 18px;}.nectar-button.medium.has-icon,.nectar-button.medium.tilt.has-icon{padding-left:42px;padding-right:42px}.screen-reader-text,.nectar-skip-to-content:not(:focus){border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important;}
+#top nav >ul >.sfHover >ul li {
+    float: unset;
+    display: inline;
+}
+</style>
+<script type="text/javascript" src="./home/jquery.min.js.download" id="jquery-core-js"></script>
+<script type="text/javascript" src="./home/jquery-migrate.min.js.download" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="./home/jquery.sumoselect.min.js.download" id="sumoselect-js"></script>
+<script type="text/javascript" src="./home/jquery.mobile.min.js.download" id="jquery-mobile-js"></script>
+<script type="text/javascript" src="./home/jquery.mCustomScrollbar.concat.min.js.download" id="mCustomScrollbar-js"></script>
+<script type="text/javascript" src="./home/jquery.fullscreen.min.js.download" id="jquery-fullscreen-js"></script>
+<script type="text/javascript" id="bwg_frontend-js-extra">
+/* <![CDATA[ */
+var bwg_objectsL10n = {"bwg_field_required":"field is required.","bwg_mail_validation":"This is not a valid email address.","bwg_search_result":"There are no images matching your search.","bwg_select_tag":"Select Tag","bwg_order_by":"Order By","bwg_search":"Search","bwg_show_ecommerce":"Show Ecommerce","bwg_hide_ecommerce":"Hide Ecommerce","bwg_show_comments":"Show Comments","bwg_hide_comments":"Hide Comments","bwg_restore":"Restore","bwg_maximize":"Maximize","bwg_fullscreen":"Fullscreen","bwg_exit_fullscreen":"Exit Fullscreen","bwg_search_tag":"SEARCH...","bwg_tag_no_match":"No tags found","bwg_all_tags_selected":"All tags selected","bwg_tags_selected":"tags selected","play":"Play","pause":"Pause","is_pro":"","bwg_play":"Play","bwg_pause":"Pause","bwg_hide_info":"Hide info","bwg_show_info":"Show info","bwg_hide_rating":"Hide rating","bwg_show_rating":"Show rating","ok":"Ok","cancel":"Cancel","select_all":"Select all","lazy_load":"0","lazy_loader":"https:\/\/murrietafacialplasticsurgery.com\/wp-content\/plugins\/photo-gallery\/images\/ajax_loader.png","front_ajax":"0","bwg_tag_see_all":"see all tags","bwg_tag_see_less":"see less tags"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./home/scripts.min.js.download" id="bwg_frontend-js"></script>
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" src="./home/js" id="google_gtagjs-js" async=""></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["murrietafacialplasticsurgery.com"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "UA-159093102-1", {"anonymize_ip":true});
+</script>
+
+<!-- End Google Analytics snippet added by Site Kit -->
+<link rel="https://api.w.org/" href="https://murrietafacialplasticsurgery.com/wp-json/"><link rel="alternate" type="application/json" href="https://murrietafacialplasticsurgery.com/wp-json/wp/v2/pages/3284"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://murrietafacialplasticsurgery.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9">
+<link rel="shortlink" href="https://murrietafacialplasticsurgery.com/">
+<link rel="alternate" type="application/json+oembed" href="https://murrietafacialplasticsurgery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmurrietafacialplasticsurgery.com%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://murrietafacialplasticsurgery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmurrietafacialplasticsurgery.com%2F&amp;format=xml">
+<meta name="generator" content="Site Kit by Google 1.50.0"><script type="text/javascript"> var root = document.getElementsByTagName( "html" )[0]; root.setAttribute( "class", "js" ); </script><script>
+setTimeout(()=>{
+console.log('custom JS working');
+//plugin__( 'body' ).hide();
+},5000);
+
+</script>
+
+
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<link rel="stylesheet" type="text/css" href="./home/css(2)"><link rel="stylesheet" type="text/css" href="./home/style(1).css"><style>:focus{outline:0}::-moz-focus-inner{border:0;}</style><script type="application/javascript" src="./home/api.js.download"></script><style type="text/css" id="column-bg-colors">.wpb_column.instance-1 > .vc_column-inner > .column-bg-overlay-wrap  > .column-bg-overlay { background-color:#2f0c34;  opacity: 1; }.wpb_column.instance-2 > .vc_column-inner > .column-bg-overlay-wrap  > .column-bg-overlay { background-color:#49224e;  opacity: 1; }.wpb_column.instance-3 > .vc_column-inner > .column-bg-overlay-wrap  > .column-bg-overlay { background-color:#0c1534;  opacity: 1; }</style></head><body class="home page-template-default page page-id-3284 material wpb-js-composer js-comp-ver-6.7 vc_responsive" data-footer-reveal="false" data-footer-reveal-shadow="none" data-header-format="centered-menu-under-logo" data-body-border="off" data-boxed-style="" data-header-breakpoint="1000" data-dropdown-style="minimal" data-cae="easeOutCubic" data-cad="750" data-megamenu-width="full-width" data-aie="slide-down" data-ls="fancybox" data-apte="standard" data-hhun="0" data-fancy-form-rcs="default" data-form-style="minimal" data-form-submit="regular" data-is="minimal" data-button-style="rounded_shadow" data-user-account-button="false" data-flex-cols="true" data-col-gap="default" data-header-inherit-rc="false" data-header-search="false" data-animated-anchors="true" data-ajax-transitions="true" data-full-width-header="false" data-slide-out-widget-area="true" data-slide-out-widget-area-style="slide-out-from-right" data-user-set-ocm="off" data-loading-animation="none" data-bg-header="true" data-responsive="1" data-ext-responsive="true" data-ext-padding="90" data-header-resize="1" data-header-color="light" data-transparent-header="false" data-cart="false" data-remove-m-parallax="" data-remove-m-video-bgs="" data-m-animate="0" data-force-header-trans-color="light" data-smooth-scrolling="0" data-permanent-transparent="false" style="--scroll-bar-w: 13px"><div id="priceSimulatorPlugin"><div id="ovr"><div class="price_animated p_s_w_p_wrap_p"><a class="cd-nav-trigger" style="cursor:pointer" id="cdnav"><h4 class="price-custom-rotate p_s_w_p_tra">Request Quote Now</h4></a><form id="regForm"><div id="cd-nav" class="cd-nav"><div class="cd-navigation-wrapper p_s_w_p_cd_nv_wpp"><div class="cd-half-block"><div id="sldr" class="price_silulator"><div class="p_s_w_p_hm_sl" id="first_p_s_w_p_u"><div class="p_s_w_p_close"><span onclick="closePSWP()" class="p_s_w_b_close_span"></span></div><div class="p_s_w_b_lis"><h6>My Procedure List</h6><i class="fa fa-shopping-cart"></i><div id="p_s_w_p_bkt_list" class="p_s_w_count">0</div></div><div class="p_s_w_p_logo"><h3 style="font-size:20px">Request Quote Now</h3><p>Get a Quote in an Instant!</p></div><div class="p_s_w_p_in_tabs"><input type="hidden" value="LroUFx6zqcZ+Fkz9/fV2VCnIRnayanF59yzjWHSLJCohxnbbFdvjzo9TtDWURkaPHLQgaCaDuzxwLVkpLojufQ==" id="simulator_user"><input type="hidden" value="6LfCTtwZAAAAAOe8_WK3gJsYaP9_pkqMWKqUfXfN" id="sitekey"><div class="flow_icons"><div class="icon_fst">1</div><div class="icon_fst">2</div><div class="icon_fst">3</div><div class="icon_fst">4</div></div><div class="p_s_w_p_form"><label>Area of Interest</label><select onchange="getProcedure()" id="area_interest_list" name="area-interest" title="Area of interest" required=""><option value="">-- Select Option --</option><option value="1">Plastic Surgery - Head / Face / Neck</option><option value="2">Plastic Surgery - Body</option></select></div><div id="prod_cat" class="p_s_w_p_form" style="display: none;"><label>Select Procedure Category</label><select id="select_procedure" name="select-procedure" onchange="getProcedure()" data-placement="top" data-toggle="tooltip" title="Select Procedure Category"><option value="">-- Select Option --</option><option value="surgical">Surgical</option><option value="nonsurgical">Non Surgical</option></select></div><div id="procd_list" class="accordians p_s_w_p_accor_i" style="display: none;"><label id="prdocon">Select Procedure</label><div class="bs-example" data-example-id="collapse-accordion"><div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"></div></div></div></div><div class="p_s_n_t_b_nxt" id="next"></div><div class="p_s_w_p_f_text bottom_text"><p class="p_s_w_p_para">Powered by <span><a href="https://www.zendyhealth.com/" target="_blank">ZendyHealth</a></span></p></div></div><div class="p_s_w_p_hm_sl" id="scnd_p_s_w_p_u"><div class="p_s_w_p_close"><span onclick="closePSWP()" class="p_s_w_b_close_span"></span></div><div class="p_s_w_b_lis"><h6>My Procedure List</h6><i class="fa fa-shopping-cart"></i><div id="p_s_w_p_bkt_list" class="p_s_w_count">0</div></div><div class="p_s_w_p_logo"><h3 style="font-size:20px">Request Quote Now</h3><p>Get a Quote in an Instant!</p></div><div class="p_s_w_p_in_tabs cust_by_kk"><div class="flow_icons second"><div class="icon_fst">1</div><div class="icon_fst">2</div><div class="icon_fst">3</div><div class="icon_fst">4</div></div><div class="p_s_s_f_i"><label>First Name <i class="fa fa-asterisk"></i></label><input type="text" name="fname" id="fname" autocomplete="off" placeholder="Enter your first name" required=""><span id="show_error_firstname" class="error_sec"></span></div><div class="p_s_s_f_i"><label>Last Name <i class="fa fa-asterisk"></i></label><input type="text" name="lname" id="lname" autocomplete="off" placeholder="Enter your last name" required=""><span id="show_error_lastname" class="error_sec"></span></div><div class="p_s_s_f_i"><label>Email <i class="fa fa-asterisk"></i></label><input type="text" name="email" id="email" autocomplete="off" placeholder="Enter your email" required=""><span id="show_error_email" class="error_sec"></span></div><div class="p_s_s_f_i"><label>Phone <i class="fa fa-asterisk"></i></label><input type="text" name="phone" id="phone" autocomplete="off" placeholder="(555) 555-5555" maxlength="10" required=""><span id="show_error_phone" class="error_sec"></span></div><div class="p_s_s_f_i" name="gender" required=""><label>Select Gender <i class="fa fa-asterisk"></i></label><select name="gender" id="gender" required=""><option value="">--Select Gender--</option><option value="Male">Male</option><option value="Female">Female</option></select><span id="show_error_gender" class="error_sec"></span></div></div><div id="show_error_ph" class="form-group"></div><div class="p_s_n_t_b_nxt"><input type="button" value="Previous" onclick="slidePRviosfst()"><input type="button" onclick="slideAb()" value="Next"></div><div class="p_s_w_p_f_text bottom_text"><p class="p_s_w_p_para">Powered by <span><a href="https://www.zendyhealth.com/" target="_blank">ZendyHealth</a></span></p></div></div><div class="fourth p_s_w_p_hm_sl" id="four_p_s_w_p_u"><div class="p_s_w_p_close"><span onclick="closePSWP()" class="p_s_w_b_close_span"></span></div><div class="p_s_w_b_lis"><h6>My Procedure List</h6><i class="fa fa-shopping-cart"></i><div id="p_s_w_p_bkt_list" class="p_s_w_count">0</div></div><div class="p_s_w_p_logo"><h3 style="font-size:20px">Request Quote Now</h3><p>Get a Quote in an Instant!</p></div><div class="p_s_w_p_in_tabs"><div class="flow_icons"><div class="icon_fst">1</div><div class="icon_fst">2</div><div class="icon_fst">3</div><div class="icon_fst">4</div></div><div class="Procedure_all p_s_w_p_pro_all"><h3>Procedure</h3></div><div class="second_error"><h5 style="display: none;">.</h5></div><div class="p_s_w_p_pro_al_itm" id="all_item_details"></div><div class="p_s_n_t_b_nxt add_more_p_s"><input type="button" onclick="slideMain()" value="Add Another Procedure"></div><div class="captcha_values"><div id="recapcha_div" class="g-recaptcha"></div></div></div><div id="cpatcha" class="capchea_sect p_s_n_t_b_nxt"><input type="button" value="Previous" onclick="slidePRvios()"><input type="button" id="submit_btn" onclick="slidefinish()" value="Submit"></div><div class="p_s_w_p_ds"><h5>By submitting, you are agreeing to our <span><a target="_blank" href="https://zendyhealth.com/terms-of-use/">Terms of Use</a></span>.</h5><span class="p_s_w_p_msg">Messaging and data rates may apply.</span></div><div class="p_s_w_p_f_text bottom_text"><p class="p_s_w_p_para">Powered by <span><a href="https://www.zendyhealth.com/" target="_blank">ZendyHealth</a></span></p></div></div><div class="third p_s_w_p_hm_sl"><div class="p_s_w_p_logo"><h3 style="font-size:20px">Request Quote Now</h3><p>Get a Quote in an Instant!</p></div><div class="flow_icons"><div class="icon_fst">1</div><div class="icon_fst">2</div><div class="icon_fst">3</div><div class="icon_fst">4</div></div><div class="thanks p_s_w_p_thank"><img class="p_s_w_p_thank_img" src="./home/thanks.png" alt="Thank you"><p class="p_s_w_p_title">Great choices! We're working on your quote right now.<br> Please check your email and look for a text on your phone to see your instant quote!</p></div></div></div></div></div></div></form></div></div></div><script type="text/javascript" id="Plugin_price" src="./home/main.js.download"></script>		<style type="text/css" id="wp-custom-css">
+			#header-outer nav >ul >.megamenu.nectar-megamenu-menu-item >.sub-menu > li {
+    opacity: 1;
+}
+
+@media(min-width:320px) and (max-width: 767px){
+.p_s_w_p_sl_opn .cd-nav-trigger {
+	top: 38% !important;
+}
+}
+@media(max-width:375px){
+		.swiper-slide .content{
+		padding-left:10px;
+	}
+	.thanks p_s_w_p_thank{
+		padding-top:70px;
+	}
+}
+
+/*Custom button height override*/
+@media only screen and (max-width: 1400px) {
+#header-outer[data-header-button_style="shadow_hover_scale"] #top nav >ul >li[class*="button_solid_color"] >a:before, #header-outer[data-header-button_style="shadow_hover_scale"] .slide-out-widget-area-toggle[data-custom-color="true"] a:before {
+	height: 40px;
+	}}		</style>
+		<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+	
+	<script type="text/javascript">
+	 (function(window, document) {
+
+		 if(navigator.userAgent.match(/(Android|iPod|iPhone|iPad|BlackBerry|IEMobile|Opera Mini)/)) {
+			 document.body.className += " using-mobile-browser mobile ";
+		 }
+
+		 if( !("ontouchstart" in window) ) {
+
+			 var body = document.querySelector("body");
+			 var winW = window.innerWidth;
+			 var bodyW = body.clientWidth;
+
+			 if (winW > bodyW + 4) {
+				 body.setAttribute("style", "--scroll-bar-w: " + (winW - bodyW - 4) + "px");
+			 } else {
+				 body.setAttribute("style", "--scroll-bar-w: 0px");
+			 }
+		 }
+
+	 })(window, document);
+   </script><a href="https://murrietafacialplasticsurgery.com/#ajax-content-wrap" class="nectar-skip-to-content">Skip to main content</a><div class="ocm-effect-wrap"><div class="ocm-effect-wrap-inner"><div id="ajax-loading-screen" data-disable-mobile="1" data-disable-fade-on-click="0" data-effect="standard" data-method="standard" class="loaded hidden" style="opacity: 0; display: none;"><div class="loading-icon none" style="opacity: 0;"></div></div>	
+	<div id="header-space" data-header-mobile-fixed="1" style="height: 310px;"></div> 
+	
+		<div id="header-outer" data-has-menu="true" data-has-buttons="no" data-header-button_style="shadow_hover_scale" data-using-pr-menu="false" data-mobile-fixed="1" data-ptnm="false" data-lhe="animated_underline" data-user-set-bg="#ffffff" data-format="centered-menu-under-logo" data-permanent-transparent="false" data-megamenu-rt="0" data-remove-fixed="0" data-header-resize="1" data-cart="false" data-transparency-option="0" data-box-shadow="small" data-shrink-num="6" data-using-secondary="1" data-using-logo="1" data-logo-height="150" data-m-logo-height="50" data-padding="28" data-full-width="false" data-condense="false" class="dark-slide">
+			
+	<div id="header-secondary-outer" class="centered-menu-under-logo" data-mobile="default" data-remove-fixed="0" data-lhe="animated_underline" data-secondary-text="false" data-full-width="true" data-mobile-fixed="1" data-permanent-transparent="false">
+		<div class="container">
+			<nav>
+				<ul id="social"><li><a target="_blank" rel="noopener" href="https://www.facebook.com/MurrietaFacialPlasticSurgery"><span class="screen-reader-text">facebook</span><i class="fa fa-facebook" aria-hidden="true"></i> </a></li><li><a target="_blank" rel="noopener" href="https://www.instagram.com/superplasticsurgeons/"><span class="screen-reader-text">instagram</span><i class="fa fa-instagram" aria-hidden="true"></i> </a></li><li><a href="https://murrietafacialplasticsurgery.com/contact/"><span class="screen-reader-text">phone</span><i class="fa fa-phone" aria-hidden="true"></i> </a></li><li><a href="https://murrietafacialplasticsurgery.com/contact/"><span class="screen-reader-text">email</span><i class="fa fa-envelope" aria-hidden="true"></i> </a></li></ul>				
+			</nav>
+		</div>
+	</div>
+	
+
+<div id="search-outer" class="nectar">
+	<div id="search">
+		<div class="container">
+			 <div id="search-box">
+				 <div class="inner-wrap">
+					 <div class="col span_12">
+						  <form role="search" action="https://murrietafacialplasticsurgery.com/" method="GET">
+														 <input type="text" name="s" id="s" value="" aria-label="Search" placeholder="Search">
+							 
+						<span>Hit enter to search or ESC to close</span>
+												</form>
+					</div><!--/span_12-->
+				</div><!--/inner-wrap-->
+			 </div><!--/search-box-->
+			 <div id="close"><a href="https://murrietafacialplasticsurgery.com/#"><span class="screen-reader-text">Close Search</span>
+				<span class="close-wrap"> <span class="close-line close-line1"></span> <span class="close-line close-line2"></span> </span>				 </a></div>
+		 </div><!--/container-->
+	</div><!--/search-->
+</div><!--/search-outer-->
+
+<header id="top">
+	<div class="container">
+		<div class="row">
+			<div class="col span_3">
+								<a id="logo" href="https://murrietafacialplasticsurgery.com/" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
+					<img class="stnd skip-lazy default-logo dark-version" width="1010" height="777" alt="Murrieta Facial Plastic Surgery " src="./home/Asset-16@2x.png" srcset="//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/06/Asset-16@2x.png 1x, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/06/Murrieta-FPC@3x-100.jpg 2x">				</a>
+							</div><!--/span_3-->
+
+			<div class="col span_9 col_last">
+									<div class="nectar-mobile-only mobile-header"><div class="inner"></div></div>
+													<div class="slide-out-widget-area-toggle mobile-icon slide-out-from-right" data-custom-color="false" data-icon-animation="simple-transform">
+						<div> <a href="https://murrietafacialplasticsurgery.com/#sidewidgetarea" aria-label="Navigation Menu" aria-expanded="false" class="closed">
+							<span class="screen-reader-text">Menu<i class="lines-button x2 hover-effect"> <i class="lines"></i> </i></span><span aria-hidden="true"> <i class="lines-button x2"> <i class="lines"></i> </i> <i class="lines-button x2 hover-effect"> <i class="lines"></i> </i></span>
+						</a></div>
+					</div>
+				
+									<nav>
+													<ul class="sf-menu sf-js-enabled sf-arrows">
+								<li id="menu-item-3445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3284 current_page_item nectar-regular-menu-item menu-item-3445"><a href="https://murrietafacialplasticsurgery.com/" aria-current="page"><span class="menu-title-text">Home</span></a></li>
+<li id="menu-item-3622" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nectar-regular-menu-item megamenu nectar-megamenu-menu-item align-left width-100 menu-item-3622"><a href="https://murrietafacialplasticsurgery.com/facial-proceedures/" class="sf-with-ul"><span class="menu-title-text">Face</span></a>
+<ul class="sub-menu" style="padding-left: 329px; padding-right: 330px; width: 1245px; left: -329px; box-sizing: content-box;">
+	<li id="menu-item-3635" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3635"><a href="https://murrietafacialplasticsurgery.com/brow-lift/"><span class="menu-title-text">Brow Lift</span></a></li>
+	<li id="menu-item-3623" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3623"><a href="https://murrietafacialplasticsurgery.com/chin-augmentation/"><span class="menu-title-text">Chin Augmentation</span></a></li>
+	<li id="menu-item-3626" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3626"><a href="https://murrietafacialplasticsurgery.com/ear-reshaping-surgery/"><span class="menu-title-text">Ear Reshaping Surgery</span></a></li>
+	<li id="menu-item-3629" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3629"><a href="https://murrietafacialplasticsurgery.com/eyelid-surgery/"><span class="menu-title-text">Eyelid Surgery and Laser Eyelid Lift</span></a></li>
+	<li id="menu-item-3645" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3645"><a href="https://murrietafacialplasticsurgery.com/facelift/"><span class="menu-title-text">Facelift and Laser Facelift</span></a></li>
+	<li id="menu-item-3632" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3632"><a href="https://murrietafacialplasticsurgery.com/fat-transfer/"><span class="menu-title-text">Fat Transfer</span></a></li>
+	<li id="menu-item-3638" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3638"><a href="https://murrietafacialplasticsurgery.com/mid-facelift/"><span class="menu-title-text">Mid-Facelift</span></a></li>
+	<li id="menu-item-3641" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3641"><a href="https://murrietafacialplasticsurgery.com/neck-lift/"><span class="menu-title-text">Neck Lift</span></a></li>
+	<li id="menu-item-5545" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-5545"><a href="https://murrietafacialplasticsurgery.com/thermilift-laser-lift/"><span class="menu-title-text">ThermiLift (Laser Lift)</span></a></li>
+</ul>
+</li>
+<li id="menu-item-3669" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nectar-regular-menu-item megamenu nectar-megamenu-menu-item align-middle width-100 menu-item-3669"><a href="https://murrietafacialplasticsurgery.com/nose/" class="sf-with-ul"><span class="menu-title-text">Nose</span></a>
+<ul class="sub-menu" style="padding-left: 329px; padding-right: 330px; width: 1245px; left: -329px; box-sizing: content-box;">
+	<li id="menu-item-3672" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3672"><a href="https://murrietafacialplasticsurgery.com/rhinoplasty-nose-surgery/"><span class="menu-title-text">Rhinoplasty (Nose Surgery)</span></a></li>
+	<li id="menu-item-3675" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3675"><a href="https://murrietafacialplasticsurgery.com/anti-aging-rhinoplasty/"><span class="menu-title-text">Anti-Aging Rhinoplasty</span></a></li>
+	<li id="menu-item-3684" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3684"><a href="https://murrietafacialplasticsurgery.com/teenage-rhinoplasty/"><span class="menu-title-text">Teenage Rhinoplasty</span></a></li>
+	<li id="menu-item-3682" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3682"><a href="https://murrietafacialplasticsurgery.com/african-american-rhinoplasty/"><span class="menu-title-text">African American Rhinoplasty</span></a></li>
+	<li id="menu-item-3681" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3681"><a href="https://murrietafacialplasticsurgery.com/asian-rhinoplasty/"><span class="menu-title-text">Asian Rhinoplasty</span></a></li>
+	<li id="menu-item-3687" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3687"><a href="https://murrietafacialplasticsurgery.com/caucasian-rhinoplasty/"><span class="menu-title-text">Caucasian Rhinoplasty</span></a></li>
+	<li id="menu-item-3690" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3690"><a href="https://murrietafacialplasticsurgery.com/hispanic-rhinoplasty/"><span class="menu-title-text">Hispanic Rhinoplasty</span></a></li>
+	<li id="menu-item-3693" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3693"><a href="https://murrietafacialplasticsurgery.com/middle-eastern-rhinoplasty/"><span class="menu-title-text">Middle Eastern Rhinoplasty</span></a></li>
+</ul>
+</li>
+<li id="menu-item-3696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nectar-regular-menu-item megamenu nectar-megamenu-menu-item align-middle width-100 menu-item-3696"><a href="https://murrietafacialplasticsurgery.com/skin-procedures/" class="sf-with-ul"><span class="menu-title-text">Skin</span></a>
+<ul class="sub-menu" style="padding-left: 329px; padding-right: 330px; width: 1245px; left: -329px; box-sizing: content-box;">
+	<li id="menu-item-3699" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3699"><a href="https://murrietafacialplasticsurgery.com/chemical-peel/"><span class="menu-title-text">Chemical Peel</span></a></li>
+	<li id="menu-item-3702" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3702"><a href="https://murrietafacialplasticsurgery.com/fraxel-laser-treatment/"><span class="menu-title-text">Fraxel Laser Treatment</span></a></li>
+	<li id="menu-item-3708" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3708"><a href="https://murrietafacialplasticsurgery.com/cosmetic-fillers/"><span class="menu-title-text">Cosmetic Fillers</span></a></li>
+	<li id="menu-item-3711" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3711"><a href="https://murrietafacialplasticsurgery.com/keloid-removal/"><span class="menu-title-text">Keloid Removal</span></a></li>
+	<li id="menu-item-3714" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3714"><a href="https://murrietafacialplasticsurgery.com/laser-skin-resurfacing/"><span class="menu-title-text">Laser Skin Resurfacing</span></a></li>
+	<li id="menu-item-3717" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3717"><a href="https://murrietafacialplasticsurgery.com/lip-augmentation/"><span class="menu-title-text">Lip Augmentation</span></a></li>
+	<li id="menu-item-3720" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3720"><a href="https://murrietafacialplasticsurgery.com/microdermabrasion/"><span class="menu-title-text">Microdermabrasion</span></a></li>
+	<li id="menu-item-3723" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3723"><a href="https://murrietafacialplasticsurgery.com/mole-removal/"><span class="menu-title-text">Mole Removal (also Birthmarks &amp; Lesions)</span></a></li>
+	<li id="menu-item-3726" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3726"><a href="https://murrietafacialplasticsurgery.com/scar-revision/"><span class="menu-title-text">Scar Revision</span></a></li>
+	<li id="menu-item-3729" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3729"><a href="https://murrietafacialplasticsurgery.com/skin-care-regimen/"><span class="menu-title-text">Skin Care Regimen</span></a></li>
+	<li id="menu-item-3737" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3737"><a href="https://murrietafacialplasticsurgery.com/wrinkle-relaxers/"><span class="menu-title-text">Wrinkle Relaxers (Botox and Dysport)</span></a></li>
+</ul>
+</li>
+<li id="menu-item-5688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nectar-regular-menu-item megamenu nectar-megamenu-menu-item align-middle width-100 menu-item-5688"><a href="https://murrietafacialplasticsurgery.com/nasal-sinus-disorders-treatments/" class="sf-with-ul"><span class="menu-title-text">Nasal &amp; Sinus</span></a>
+<ul class="sub-menu" style="padding-left: 329px; padding-right: 330px; width: 1245px; left: -329px; box-sizing: content-box;">
+	<li id="menu-item-5689" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-5689"><a href="https://murrietafacialplasticsurgery.com/balloon-sinuplasty/"><span class="menu-title-text">Balloon Sinuplasty</span></a></li>
+	<li id="menu-item-5696" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-5696"><a href="https://murrietafacialplasticsurgery.com/deviated-septum/"><span class="menu-title-text">Deviated Nasal Septum</span></a></li>
+	<li id="menu-item-5695" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-5695"><a href="https://murrietafacialplasticsurgery.com/endoscopic-sinus-surgery/"><span class="menu-title-text">Endoscopic Sinus Surgery</span></a></li>
+	<li id="menu-item-5694" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-5694"><a href="https://murrietafacialplasticsurgery.com/nasal-allergy/"><span class="menu-title-text">Nasal Allergy</span></a></li>
+	<li id="menu-item-5693" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-5693"><a href="https://murrietafacialplasticsurgery.com/septal-surgery/"><span class="menu-title-text">Septal Surgery</span></a></li>
+	<li id="menu-item-5692" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-5692"><a href="https://murrietafacialplasticsurgery.com/sinusitis/"><span class="menu-title-text">Sinusitis</span></a></li>
+	<li id="menu-item-5691" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-5691"><a href="https://murrietafacialplasticsurgery.com/turbinate-hypertrophy/"><span class="menu-title-text">Turbinate Hypertrophy</span></a></li>
+	<li id="menu-item-5690" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-5690"><a href="https://murrietafacialplasticsurgery.com/turbinate-reduction/"><span class="menu-title-text">Turbinate Reduction</span></a></li>
+</ul>
+</li>
+<li id="menu-item-3543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nectar-regular-menu-item megamenu nectar-megamenu-menu-item align-left width-100 menu-item-3543"><a href="https://murrietafacialplasticsurgery.com/laser-injectables/" class="sf-with-ul"><span class="menu-title-text">Laser &amp; Injectables</span></a>
+<ul class="sub-menu" style="padding-left: 329px; padding-right: 330px; width: 1245px; left: -329px; box-sizing: content-box;">
+	<li id="menu-item-4439" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4439"><a href="https://murrietafacialplasticsurgery.com/l-laser-skin-resurfacing/"><span class="menu-title-text">Laser Skin Resurfacing</span></a></li>
+	<li id="menu-item-5700" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-5700"><a href="https://murrietafacialplasticsurgery.com/thermilift-laser-lift/"><span class="menu-title-text">ThermiLift (Laser Lift)</span></a></li>
+	<li id="menu-item-4438" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4438"><a href="https://murrietafacialplasticsurgery.com/l-cosmetic-fillers/"><span class="menu-title-text">Cosmetic Fillers</span></a></li>
+	<li id="menu-item-4437" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4437"><a href="https://murrietafacialplasticsurgery.com/l-wrinkle-relaxers/"><span class="menu-title-text">Wrinkle Relaxers</span></a></li>
+</ul>
+</li>
+<li id="menu-item-3546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nectar-regular-menu-item megamenu nectar-megamenu-menu-item align-middle width-100 menu-item-3546"><a href="https://murrietafacialplasticsurgery.com/medical-spa/" class="sf-with-ul"><span class="menu-title-text">Medical Spa</span></a>
+<ul class="sub-menu" style="padding-left: 329px; padding-right: 330px; width: 1245px; left: -329px; box-sizing: content-box;">
+	<li id="menu-item-4406" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4406"><a href="https://murrietafacialplasticsurgery.com/spa-chemical-peel/"><span class="menu-title-text">Chemical Peel</span></a></li>
+	<li id="menu-item-4405" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4405"><a href="https://murrietafacialplasticsurgery.com/spa-fraxel-laser-treatment/"><span class="menu-title-text">Fraxel Laser Treatment / Laser Resurfacing</span></a></li>
+	<li id="menu-item-4403" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4403"><a href="https://murrietafacialplasticsurgery.com/spa-microdermabrasion/"><span class="menu-title-text">Microdermabrasion</span></a></li>
+	<li id="menu-item-4402" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4402"><a href="https://murrietafacialplasticsurgery.com/spa-skin-care-regimen/"><span class="menu-title-text">Skin Care Regimen</span></a></li>
+</ul>
+</li>
+<li id="menu-item-3549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nectar-regular-menu-item megamenu nectar-megamenu-menu-item align-middle width-100 menu-item-3549"><a href="https://murrietafacialplasticsurgery.com/for-men/" class="sf-with-ul"><span class="menu-title-text">For Men</span></a>
+<ul class="sub-menu" style="padding-left: 329px; padding-right: 330px; width: 1245px; left: -329px; box-sizing: content-box;">
+	<li id="menu-item-4376" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4376"><a href="https://murrietafacialplasticsurgery.com/male-buttock-augmentation/"><span class="menu-title-text">Buttock Augmentation</span></a></li>
+	<li id="menu-item-4375" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4375"><a href="https://murrietafacialplasticsurgery.com/male-liposuction/"><span class="menu-title-text">Liposuction</span></a></li>
+	<li id="menu-item-4372" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4372"><a href="https://murrietafacialplasticsurgery.com/male-mole-removal/"><span class="menu-title-text">Mole Removal</span></a></li>
+	<li id="menu-item-4371" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4371"><a href="https://murrietafacialplasticsurgery.com/male-scar-revision/"><span class="menu-title-text">Scar Revision</span></a></li>
+	<li id="menu-item-4370" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4370"><a href="https://murrietafacialplasticsurgery.com/male-keloid-removal/"><span class="menu-title-text">Keloid Removal</span></a></li>
+	<li id="menu-item-4369" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4369"><a href="https://murrietafacialplasticsurgery.com/male-brow-lift/"><span class="menu-title-text">Brow Lift</span></a></li>
+	<li id="menu-item-4368" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4368"><a href="https://murrietafacialplasticsurgery.com/male-facelift/"><span class="menu-title-text">Facelift</span></a></li>
+	<li id="menu-item-4367" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4367"><a href="https://murrietafacialplasticsurgery.com/male-rhinoplasty/"><span class="menu-title-text">Rhinoplasty</span></a></li>
+	<li id="menu-item-4366" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4366"><a href="https://murrietafacialplasticsurgery.com/male-chin-augmentation/"><span class="menu-title-text">Chin Augmentation</span></a></li>
+	<li id="menu-item-4365" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4365"><a href="https://murrietafacialplasticsurgery.com/male-ear-reshaping-surgery/"><span class="menu-title-text">Ear Reshaping Surgery</span></a></li>
+	<li id="menu-item-4362" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4362"><a href="https://murrietafacialplasticsurgery.com/male-wrinkle-relaxers/"><span class="menu-title-text">Wrinkle Relaxers</span></a></li>
+	<li id="menu-item-4361" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4361"><a href="https://murrietafacialplasticsurgery.com/male-derma-fillers/"><span class="menu-title-text">Dermal Fillers</span></a></li>
+	<li id="menu-item-4360" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4360"><a href="https://murrietafacialplasticsurgery.com/male-microdermabrasion/"><span class="menu-title-text">Microdermabrasion</span></a></li>
+	<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4359"><a href="https://murrietafacialplasticsurgery.com/male-laser-skin-resurfacing/"><span class="menu-title-text">Laser Skin Resurfacing</span></a></li>
+	<li id="menu-item-4358" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4358"><a href="https://murrietafacialplasticsurgery.com/male-skin-care-regimen/"><span class="menu-title-text">Skin Care Regimen</span></a></li>
+</ul>
+</li>
+<li id="menu-item-3560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nectar-regular-menu-item megamenu nectar-megamenu-menu-item align-left width-100 menu-item-3560"><a href="https://murrietafacialplasticsurgery.com/body/" class="sf-with-ul"><span class="menu-title-text">Body</span></a>
+<ul class="sub-menu" style="padding-left: 329px; padding-right: 330px; width: 1245px; left: -329px; box-sizing: content-box;">
+	<li id="menu-item-3569" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3569"><a href="https://murrietafacialplasticsurgery.com/body-contouring/"><span class="menu-title-text">Body Contouring</span></a></li>
+	<li id="menu-item-3582" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3582"><a href="https://murrietafacialplasticsurgery.com/buttock-augmentation/"><span class="menu-title-text">Buttock Augmentation</span></a></li>
+	<li id="menu-item-3590" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3590"><a href="https://murrietafacialplasticsurgery.com/liposuction/"><span class="menu-title-text">Liposuction</span></a></li>
+	<li id="menu-item-3595" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3595"><a href="https://murrietafacialplasticsurgery.com/mommy-makeover/"><span class="menu-title-text">Mommy Makeover</span></a></li>
+	<li id="menu-item-4976" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4976"><a href="https://murrietafacialplasticsurgery.com/scar-revision-b/"><span class="menu-title-text">Scar Revision</span></a></li>
+	<li id="menu-item-4977" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4977"><a href="https://murrietafacialplasticsurgery.com/mole-removal-b/"><span class="menu-title-text">Mole Removal</span></a></li>
+	<li id="menu-item-4978" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4978"><a href="https://murrietafacialplasticsurgery.com/body/keloid-removal/"><span class="menu-title-text">Keloid Removal</span></a></li>
+</ul>
+</li>
+<li id="menu-item-3467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nectar-regular-menu-item menu-item-3467"><a href="https://murrietafacialplasticsurgery.com/about-us/" class="sf-with-ul"><span class="menu-title-text">About Us</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-3468" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3468"><a href="https://murrietafacialplasticsurgery.com/meet-the-doctor/"><span class="menu-title-text">Meet the Doctor</span></a></li>
+	<li id="menu-item-4486" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-4486"><a href="https://murrietafacialplasticsurgery.com/contact/"><span class="menu-title-text">Contact Us</span></a></li>
+</ul>
+</li>
+<li id="menu-item-3741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nectar-regular-menu-item megamenu nectar-megamenu-menu-item align-middle width-100 menu-item-3741"><a href="https://murrietafacialplasticsurgery.com/photos-stories/" class="sf-with-ul"><span class="menu-title-text">Photos &amp; Stories</span></a>
+<ul class="sub-menu" style="padding-left: 329px; padding-right: 330px; width: 1245px; left: -329px; box-sizing: content-box;">
+	<li id="menu-item-6004" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-6004"><a href="https://murrietafacialplasticsurgery.com/bwg_album/before-and-after-photos-of-actual-patients/"><span class="menu-title-text">Before and After Photos</span></a></li>
+	<li id="menu-item-3507" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3507"><a href="https://murrietafacialplasticsurgery.com/testimonials/"><span class="menu-title-text">Testimonials</span></a></li>
+	<li id="menu-item-3508" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3508"><a href="https://murrietafacialplasticsurgery.com/reviews/"><span class="menu-title-text">Reviews</span></a></li>
+</ul>
+</li>
+<li id="menu-item-5935" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-5935"><a href="tel:951-227-7772"><span class="menu-title-text">Call Us: <br> (951) 227-7772</span></a></li>
+<li id="menu-item-6237" class="menu-item menu-item-type-custom menu-item-object-custom button_bordered_2 menu-item-6237"><a href="https://murrietafacialplasticsurgery.com/contact/"><span class="menu-title-text">Contact Us &gt;&gt;</span></a></li>
+							</ul>
+													<ul class="buttons sf-menu" data-user-set-ocm="off">
+
+								
+							</ul>
+						
+					</nav>
+
+					
+				</div><!--/span_9-->
+
+				
+			</div><!--/row-->
+					</div><!--/container-->
+	</header>		
+	<div class="bg-color-stripe"></div></div>
+		<div id="ajax-content-wrap">
+<div class="container-wrap" style="padding-top: 0px;">
+	<div class="container main-content">
+		<div class="row">
+			
+		<div id="fws_61fea392cdaf2" data-column-margin="default" data-midnight="dark" class="wpb_row vc_row-fluid vc_row top-level full-width-ns full-width-section first-section loaded" style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap" data-bg-animation="none" data-bg-overlay="false"><div class="inner-wrap"><div class="row-bg viewport-desktop" style=""></div></div></div><div class="row_col_wrap_12 col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone " data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				<div data-midnight="nectar-slider" class="parallax_slider_outer element-in-view" style="height: 582px;"><div data-transition="slide" data-overall_style="classic" data-flexible-height="true" data-animate-in-effect="slide-down" data-fullscreen="true" data-button-sizing="large" data-button-styling="btn_with_count" data-autorotate="5000" data-parallax="true" data-parallax-disable-mobile="" data-caption-trans="fade_in_from_bottom" data-parallax-style="bg_only" data-bg-animation="ken_burns" data-full-width="true" class="nectar-slider-wrap nectar-slider-enabled loaded nectar-parallax-enabled" id="nectar-slider-instance-1" style="left: -329px; margin-left: 0px; width: 1903px; height: 582px;" autoplay-id="0"><div class="swiper-container" data-tho="auto" data-tco="auto" data-pho="auto" data-pco="auto" data-loop="false" data-height="582" data-min-height="" data-arrows="false" data-bullets="false" data-bullet_style="see_through" data-bullet_position="bottom" data-desktop-swipe="true" data-settings="" style="width: 1903px; background-color: rgb(0, 0, 0); height: 583px;"> <div class="swiper-wrapper no-transform" style="width: 1903px; height: 583px;"><div class="swiper-slide swiper-slide-visible swiper-slide-active ken-burns no-transform" data-desktop-content-width="auto" data-tablet-content-width="auto" data-bg-alignment="top" data-color-scheme="dark" data-x-pos="left" data-y-pos="middle" style="background-color: rgb(0, 0, 0); width: 1903px; height: 583px;" data-ken-burns="active"><div class="slide-bg-wrap"><div class="image-bg translate" style="background-image: url(&quot;//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/05/photodune-DREVIKsw-beautiful-european-middle-age-young-woman-with-blue-green-eyes-looking-at-the-camera-l.jpg&quot;); height: 661px; transform: translate3d(0px, 0px, 0px); will-change: transform;"> &nbsp; </div></div><div class="container">
+						<div class="content" style="top: 174.25px;"><h2 class="ns-heading-el" style="opacity: 1; transform: translateZ(0px) translateY(0px);"><b>You :  Rejuvenated.</b></h2><p style="opacity: 1; transform: translateZ(0px) translateY(0px);"><span><b> Specializing  Exclusively in <br>the Face, Neck, &amp; Nose. </b></span></p><div class="buttons" style="opacity: 1; transform: translateZ(0px) translateY(0px);"><div class="button solid_color">
+										 <a class="extra-color-gradient-2" href="https://murrietafacialplasticsurgery.com/contact/">Request Your FREE Consultation</a>
+
+										 <!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/murrieta-facial-plastic', text: 'Explore payment options', size: '36', color: '#3EAB69', textColor: '#ffffff', branding: false });
+document.querySelectorAll('.calendly-badge-content')[0].style.fontSize = '24px';
+document.querySelectorAll('.calendly-badge-content')[0].style.padding = '12px';
+document.querySelectorAll('.calendly-badge-content')[0].innerHTML = 'Explore payment options <img src="./Icon.png" width="16px" alt="arrow">'; }</script>
+<!-- Calendly badge widget end -->
+										</div></div></div>
+								</div><!--/container--><a href="https://murrietafacialplasticsurgery.com/#" class="slider-down-arrow no-border"><svg class="nectar-scroll-icon" viewBox="0 0 30 45" enable-background="new 0 0 30 45">
+									<path class="nectar-scroll-icon-path" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" d="M15,1.118c12.352,0,13.967,12.88,13.967,12.88v18.76  c0,0-1.514,11.204-13.967,11.204S0.931,32.966,0.931,32.966V14.05C0.931,14.05,2.648,1.118,15,1.118z"></path>
+									</svg></a><div class="video-texture" style="opacity: 1;">  </div></div> <!--/swiper-slide--></div><div class="nectar-slider-loading " style="display: none;">  </div> </div> 
+					
+					</div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_61fea392d259e" data-column-margin="default" data-midnight="light" class="wpb_row vc_row-fluid vc_row full-width-content vc_row-o-equal-height vc_row-flex vc_row-o-content-middle" style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap" data-bg-animation="none" data-bg-overlay="false"><div class="inner-wrap"><div class="row-bg viewport-desktop" style=""></div></div></div><div class="row_col_wrap_12 col span_12 light left">
+	<div style="" class="vc_col-sm-4 wpb_column column_container vc_column_container col centered-text padding-5-percent inherit_tablet inherit_phone instance-1" data-using-bg="true" data-padding-pos="all" data-has-bg-color="true" data-bg-color="#2f0c34" data-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay" style="opacity: 1; background-color: #2f0c34;"></div></div>
+			<div class="wpb_wrapper">
+				
+<div class="wpb_text_column wpb_content_element ">
+	<div class="wpb_wrapper">
+		<h2>Schedule an Appointment</h2>
+<p>Don’t miss your chance to receive recommendations about your best treatment options and find out how we can best help you achieve the results you want.</p>
+<a class="nectar-button n-sc-button medium accent-color regular-button" target="_blank" href="https://murrietafacialplasticsurgery.com/contact/" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" style="visibility: visible;"><span>Book Appointment</span></a>
+	</div>
+</div>
+
+
+
+
+			</div> 
+		</div>
+	</div> 
+
+	<div style="" class="vc_col-sm-4 wpb_column column_container vc_column_container col centered-text padding-5-percent inherit_tablet inherit_phone instance-2" data-using-bg="true" data-padding-pos="all" data-has-bg-color="true" data-bg-color="#49224e" data-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay" style="opacity: 1; background-color: #49224e;"></div></div>
+			<div class="wpb_wrapper">
+				
+<div class="wpb_text_column wpb_content_element ">
+	<div class="wpb_wrapper">
+		<h2>About our Team</h2>
+<p>The main focus of our team here at Murrieta Facial Plastic Surgery is to work to provide stunning results that exceed expectations to each one of our patients. Our goal is to see you leaving our office with a new spring in your step, ready to face the world with a boosted sense of self-confidence.</p>
+<a class="nectar-button n-sc-button medium accent-color regular-button" href="https://murrietafacialplasticsurgery.com/meet-the-doctor/" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" style="visibility: visible;"><span>Meet Our Team</span></a>
+	</div>
+</div>
+
+
+
+
+			</div> 
+		</div>
+	</div> 
+
+	<div style="" class="vc_col-sm-4 wpb_column column_container vc_column_container col centered-text padding-5-percent inherit_tablet inherit_phone instance-3" data-using-bg="true" data-padding-pos="all" data-has-bg-color="true" data-bg-color="#0c1534" data-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay" style="opacity: 1; background-color: #0c1534;"></div></div>
+			<div class="wpb_wrapper">
+				
+<div class="wpb_text_column wpb_content_element ">
+	<div class="wpb_wrapper">
+		<h2>Services</h2>
+<p>Our goal is to make you feel your absolute best. We offer a wide variety of services, all specially designed for each individual.</p>
+<a class="nectar-button n-sc-button medium accent-color regular-button" href="https://murrietafacialplasticsurgery.com/contact/" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" style="visibility: visible;"><span>Services</span></a>
+	</div>
+</div>
+
+
+
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_61fea392d3cee" data-column-margin="default" data-midnight="dark" class="wpb_row vc_row-fluid vc_row" style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap" data-bg-animation="none" data-bg-overlay="false"><div class="inner-wrap"><div class="row-bg viewport-desktop" style=""></div></div></div><div class="row_col_wrap_12 col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone " data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				<div class="divider-wrap" data-alignment="default"><div style="height: 5%;" class="divider"></div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_61fea392d499e" data-column-margin="default" data-midnight="dark" class="wpb_row vc_row-fluid vc_row" style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap" data-bg-animation="none" data-bg-overlay="false"><div class="inner-wrap"><div class="row-bg viewport-desktop" style=""></div></div></div><div class="row_col_wrap_12 col span_12 dark left">
+	<div class="vc_col-sm-8 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone " data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+<div class="wpb_text_column wpb_content_element ">
+	<div class="wpb_wrapper">
+		<button data-tf-popup="tgmoie2h" data-tf-iframe-props="title=Schedule Appointment" data-tf-medium="snippet" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#0445AF;color:#FFFFFF;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Launch me</button><script src="//embed.typeform.com/next/embed.js"></script>
+		<h2>Welcome to Murrieta Facial Plastic Surgery</h2>
+<p>We are pleased to provide safe, personalized, and professional aesthetic and reconstructive services to Murrieta and the greater Temecula area. For those of you looking to enhance your appearance, today’s cosmetic procedures offer a wide variety of opportunities to rejuvenate your complexion, sculpt physical features, and give you increased confidence.</p>
+<p>Our experienced surgeons directed by Dr. Banthia (often called “Dr. Vish”) and highly-trained staff have performed thousands of procedures, delighting our patients with exquisite, natural results in a warm comfortable setting. Please take a minute to browse our website to learn more about our many services and our skilled and caring team that stands ready to answer your questions and serve your needs.</p>
+<h2>Our Approach</h2>
+<p>The main focus of Dr. Vish and his team is stunning results that exceed expectations. Our goal is to see you leaving our office with a new spring in your step, beautiful and ready to face the world with a boosted sense of self-confidence. It is important to note that Murrieta Facial Plastic Surgery backs up those gorgeous outcomes with an unwavering commitment to safety and personal care. Every effort is made to ensure that our patients make well-informed choices and achieve the best results possible, all within a comfortable and confidential setting.</p>
+<h3>Get Started Today</h3>
+<p>Please call Murrieta Facial Plastic Surgery today to <a href="https://murrietafacialplasticsurgery.com/contact/">schedule your free personal consultation</a>. After you meet and talk with our staff, board-certified plastic surgeons, and dermatologists you will be clear about your treatment options and ready to make educated decisions. At Murrieta Facial Plastic Surgery you can be assured of beautiful results with the utmost safety and care.</p>
+<p>Sincerely,</p>
+<p><a href="https://480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/05/Dr-Vishal-Banthia-Murrieta-Plastic-Surgery-Voted-Best.jpg"><img class="alignnone size-medium wp-image-6253" src="./home/Dr-Vishal-Banthia-Murrieta-Plastic-Surgery-Voted-Best-300x106.jpg" alt="" width="300" height="106" srcset="//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/05/Dr-Vishal-Banthia-Murrieta-Plastic-Surgery-Voted-Best-300x106.jpg 300w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/05/Dr-Vishal-Banthia-Murrieta-Plastic-Surgery-Voted-Best-1024x363.jpg 1024w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/05/Dr-Vishal-Banthia-Murrieta-Plastic-Surgery-Voted-Best-768x272.jpg 768w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/05/Dr-Vishal-Banthia-Murrieta-Plastic-Surgery-Voted-Best-1536x544.jpg 1536w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/05/Dr-Vishal-Banthia-Murrieta-Plastic-Surgery-Voted-Best-2048x726.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<h3>Vish Banthia , MD FACS</h3>
+	</div>
+</div>
+
+
+
+
+			</div> 
+		</div>
+	</div> 
+
+	<div class="vc_col-sm-4 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone " data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				<div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="fade-in">
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <img class="img-with-animation skip-lazy " data-delay="0" height="1246" width="1750" data-animation="fade-in" src="./home/TopDoctor-2022.png" alt="" srcset="//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2022/01/TopDoctor-2022.png 1750w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2022/01/TopDoctor-2022-300x214.png 300w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2022/01/TopDoctor-2022-1024x729.png 1024w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2022/01/TopDoctor-2022-768x547.png 768w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2022/01/TopDoctor-2022-1536x1094.png 1536w" sizes="(max-width: 1750px) 100vw, 1750px">
+          </div>
+        </div>
+      </div>
+    </div><div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="fade-in">
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <img class="img-with-animation skip-lazy " data-delay="0" height="1246" width="1750" data-animation="fade-in" src="./home/TopDoctor-2021.png" alt="" srcset="//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2022/01/TopDoctor-2021.png 1750w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2022/01/TopDoctor-2021-300x214.png 300w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2022/01/TopDoctor-2021-1024x729.png 1024w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2022/01/TopDoctor-2021-768x547.png 768w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2022/01/TopDoctor-2021-1536x1094.png 1536w" sizes="(max-width: 1750px) 100vw, 1750px">
+          </div>
+        </div>
+      </div>
+    </div><div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="fade-in">
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <img class="img-with-animation skip-lazy " data-delay="0" height="299" width="420" data-animation="fade-in" src="./home/Asset-1.png" alt="" srcset="//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/05/Asset-1.png 420w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/05/Asset-1-300x214.png 300w" sizes="(max-width: 420px) 100vw, 420px">
+          </div>
+        </div>
+      </div>
+    </div><div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="fade-in">
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <img class="img-with-animation skip-lazy " data-delay="0" height="299" width="420" data-animation="fade-in" src="./home/TopDoctor2019.png" alt="" srcset="//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/10/TopDoctor2019.png 420w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/10/TopDoctor2019-300x214.png 300w" sizes="(max-width: 420px) 100vw, 420px">
+          </div>
+        </div>
+      </div>
+    </div><div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="fade-in">
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <img class="img-with-animation skip-lazy " data-delay="0" height="299" width="420" data-animation="fade-in" src="./home/TopDoctor2018.png" alt="" srcset="//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/10/TopDoctor2018.png 420w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/10/TopDoctor2018-300x214.png 300w" sizes="(max-width: 420px) 100vw, 420px">
+          </div>
+        </div>
+      </div>
+    </div><div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="fade-in">
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <img class="img-with-animation skip-lazy " data-delay="0" height="314" width="380" data-animation="fade-in" src="./home/SuperplasticsurgeonsReview.jpg" alt="" srcset="//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2014/09/SuperplasticsurgeonsReview.jpg 380w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2014/09/SuperplasticsurgeonsReview-300x247.jpg 300w" sizes="(max-width: 380px) 100vw, 380px">
+          </div>
+        </div>
+      </div>
+    </div><div class="img-with-aniamtion-wrap " data-max-width="100%" data-max-width-mobile="default" data-shadow="none" data-animation="fade-in">
+      <div class="inner">
+        <div class="hover-wrap"> 
+          <div class="hover-wrap-inner">
+            <img class="img-with-animation skip-lazy " data-delay="0" height="580" width="531" data-animation="fade-in" src="./home/Murrietta-Best-Plastic-Surgery.jpg" alt="Murrieta Best Plastic Surgery" srcset="//480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/06/Murrietta-Best-Plastic-Surgery.jpg 531w, //480251-1896234-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2021/06/Murrietta-Best-Plastic-Surgery-275x300.jpg 275w" sizes="(max-width: 531px) 100vw, 531px">
+          </div>
+        </div>
+      </div>
+    </div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+	<div class="vc_col-sm-3 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone " data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				
+			</div> 
+		</div>
+	</div> 
+
+		</div>
+	</div>
+	</div>
+
+<div id="footer-outer" data-cols="3" data-custom-color="false" data-disable-copyright="false" data-matching-section-color="true" data-copyright-line="false" data-using-bg-img="false" data-bg-img-overlay="0.8" data-full-width="false" data-using-widget-area="true" data-link-hover="default">
+	
+	
+<div id="call-to-action">
+	<div class="container">
+		  <div class="triangle"></div>
+		  <span> Voted Top Doctor by ZendyHealth for Murrieta and the Temecula Area </span>
+		  <a class="nectar-button 
+		  regular-button accent-color" data-color-override="false" href="https://murrietafacialplasticsurgery.com/contact/" style="visibility: visible;">
+		  Request Your FREE Consultation &gt;&gt;		</a>
+	</div>
+</div>
+
+		
+	<div id="footer-widgets" data-has-widgets="true" data-cols="3">
+		
+		<div class="container">
+			
+						
+			<div class="row">
+				
+								
+				<div class="col span_4">
+					<div id="text-32" class="widget widget_text"><h4>About Us</h4>			<div class="textwidget">Murrieta Facial Plastic Surgery  has served the beauty needs of Temecula and its surrounding area since 2006. We are extremely proud of the skillful caring team at Murrieta Facial Plastic Surgery  that safely provides a wide variety of plastic surgery and aesthetic services.</div>
+		</div>					</div>
+					
+											
+						<div class="col span_4">
+							<div id="text-33" class="widget widget_text"><h4>Contact Us</h4>			<div class="textwidget">Murietta Facial Plastic Surgery <br>
+39755 Date St, #105, <br>
+Murrieta, CA 92563<br>
+
+Phone :  <a href="tel:951-227-7772">(951) 227-7772</a></div>
+		</div>								
+							</div>
+							
+												
+						
+													<div class="col span_4">
+								<div id="custom_html-3" class="widget_text widget widget_custom_html"><h4>Driving Directions</h4><div class="textwidget custom-html-widget"><iframe src="./home/embed.html" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div></div>									
+								</div>
+														
+															
+							</div>
+													</div><!--/container-->
+					</div><!--/footer-widgets-->
+					
+					
+  <div class="row" id="copyright" data-layout="default">
+	
+	<div class="container">
+	   
+				<div class="col span_5">
+		   
+			<p>© 2022 Murrieta Facial Plastic Surgery . <a href="https://tmmgcorp.com/">Webiste Designed, Hosted and Powered by The Medical Marketing &amp; Consulting Group</a></p>
+		</div><!--/span_5-->
+			   
+	  <div class="col span_7 col_last">
+      <ul class="social">
+              </ul>
+	  </div><!--/span_7-->
+    
+	  	
+	</div><!--/container-->
+  </div><!--/row-->
+		
+</div><!--/footer-outer-->
+
+
+	
+
+		
+		
+</div> <!--/ajax-content-wrap-->
+
+	<a id="to-top" href="https://murrietafacialplasticsurgery.com/#" class="
+		"><i class="fa fa-angle-up top-icon"></i><i class="fa fa-angle-up"></i></a>
+	</div></div><div id="slide-out-widget-area" class="slide-out-from-right" data-dropdown-func="default" data-back-txt="Back" style="padding-top: 89px; padding-bottom: 89px;">
+
+			<div class="inner-wrap">
+			<div class="inner" data-prepend-menu-mobile="false">
+
+				
+
+
+									<div class="off-canvas-menu-container mobile-only" role="navigation">
+
+						
+						<ul class="menu">
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3284 current_page_item menu-item-3445"><a href="https://murrietafacialplasticsurgery.com/" aria-current="page">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3622"><a href="https://murrietafacialplasticsurgery.com/facial-proceedures/">Face</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3635"><a href="https://murrietafacialplasticsurgery.com/brow-lift/">Brow Lift</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3623"><a href="https://murrietafacialplasticsurgery.com/chin-augmentation/">Chin Augmentation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3626"><a href="https://murrietafacialplasticsurgery.com/ear-reshaping-surgery/">Ear Reshaping Surgery</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3629"><a href="https://murrietafacialplasticsurgery.com/eyelid-surgery/">Eyelid Surgery and Laser Eyelid Lift</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3645"><a href="https://murrietafacialplasticsurgery.com/facelift/">Facelift and Laser Facelift</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3632"><a href="https://murrietafacialplasticsurgery.com/fat-transfer/">Fat Transfer</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3638"><a href="https://murrietafacialplasticsurgery.com/mid-facelift/">Mid-Facelift</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3641"><a href="https://murrietafacialplasticsurgery.com/neck-lift/">Neck Lift</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5545"><a href="https://murrietafacialplasticsurgery.com/thermilift-laser-lift/">ThermiLift (Laser Lift)</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3669"><a href="https://murrietafacialplasticsurgery.com/nose/">Nose</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3672"><a href="https://murrietafacialplasticsurgery.com/rhinoplasty-nose-surgery/">Rhinoplasty (Nose Surgery)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3675"><a href="https://murrietafacialplasticsurgery.com/anti-aging-rhinoplasty/">Anti-Aging Rhinoplasty</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3684"><a href="https://murrietafacialplasticsurgery.com/teenage-rhinoplasty/">Teenage Rhinoplasty</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3682"><a href="https://murrietafacialplasticsurgery.com/african-american-rhinoplasty/">African American Rhinoplasty</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3681"><a href="https://murrietafacialplasticsurgery.com/asian-rhinoplasty/">Asian Rhinoplasty</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3687"><a href="https://murrietafacialplasticsurgery.com/caucasian-rhinoplasty/">Caucasian Rhinoplasty</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3690"><a href="https://murrietafacialplasticsurgery.com/hispanic-rhinoplasty/">Hispanic Rhinoplasty</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3693"><a href="https://murrietafacialplasticsurgery.com/middle-eastern-rhinoplasty/">Middle Eastern Rhinoplasty</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3696"><a href="https://murrietafacialplasticsurgery.com/skin-procedures/">Skin</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3699"><a href="https://murrietafacialplasticsurgery.com/chemical-peel/">Chemical Peel</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3702"><a href="https://murrietafacialplasticsurgery.com/fraxel-laser-treatment/">Fraxel Laser Treatment</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3708"><a href="https://murrietafacialplasticsurgery.com/cosmetic-fillers/">Cosmetic Fillers</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3711"><a href="https://murrietafacialplasticsurgery.com/keloid-removal/">Keloid Removal</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3714"><a href="https://murrietafacialplasticsurgery.com/laser-skin-resurfacing/">Laser Skin Resurfacing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3717"><a href="https://murrietafacialplasticsurgery.com/lip-augmentation/">Lip Augmentation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3720"><a href="https://murrietafacialplasticsurgery.com/microdermabrasion/">Microdermabrasion</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3723"><a href="https://murrietafacialplasticsurgery.com/mole-removal/">Mole Removal (also Birthmarks &amp; Lesions)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3726"><a href="https://murrietafacialplasticsurgery.com/scar-revision/">Scar Revision</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3729"><a href="https://murrietafacialplasticsurgery.com/skin-care-regimen/">Skin Care Regimen</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3737"><a href="https://murrietafacialplasticsurgery.com/wrinkle-relaxers/">Wrinkle Relaxers (Botox and Dysport)</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5688"><a href="https://murrietafacialplasticsurgery.com/nasal-sinus-disorders-treatments/">Nasal &amp; Sinus</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5689"><a href="https://murrietafacialplasticsurgery.com/balloon-sinuplasty/">Balloon Sinuplasty</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5696"><a href="https://murrietafacialplasticsurgery.com/deviated-septum/">Deviated Nasal Septum</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5695"><a href="https://murrietafacialplasticsurgery.com/endoscopic-sinus-surgery/">Endoscopic Sinus Surgery</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5694"><a href="https://murrietafacialplasticsurgery.com/nasal-allergy/">Nasal Allergy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5693"><a href="https://murrietafacialplasticsurgery.com/septal-surgery/">Septal Surgery</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5692"><a href="https://murrietafacialplasticsurgery.com/sinusitis/">Sinusitis</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5691"><a href="https://murrietafacialplasticsurgery.com/turbinate-hypertrophy/">Turbinate Hypertrophy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5690"><a href="https://murrietafacialplasticsurgery.com/turbinate-reduction/">Turbinate Reduction</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3543"><a href="https://murrietafacialplasticsurgery.com/laser-injectables/">Laser &amp; Injectables</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4439"><a href="https://murrietafacialplasticsurgery.com/l-laser-skin-resurfacing/">Laser Skin Resurfacing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5700"><a href="https://murrietafacialplasticsurgery.com/thermilift-laser-lift/">ThermiLift (Laser Lift)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4438"><a href="https://murrietafacialplasticsurgery.com/l-cosmetic-fillers/">Cosmetic Fillers</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4437"><a href="https://murrietafacialplasticsurgery.com/l-wrinkle-relaxers/">Wrinkle Relaxers</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3546"><a href="https://murrietafacialplasticsurgery.com/medical-spa/">Medical Spa</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4406"><a href="https://murrietafacialplasticsurgery.com/spa-chemical-peel/">Chemical Peel</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4405"><a href="https://murrietafacialplasticsurgery.com/spa-fraxel-laser-treatment/">Fraxel Laser Treatment / Laser Resurfacing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4403"><a href="https://murrietafacialplasticsurgery.com/spa-microdermabrasion/">Microdermabrasion</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4402"><a href="https://murrietafacialplasticsurgery.com/spa-skin-care-regimen/">Skin Care Regimen</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3549"><a href="https://murrietafacialplasticsurgery.com/for-men/">For Men</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4376"><a href="https://murrietafacialplasticsurgery.com/male-buttock-augmentation/">Buttock Augmentation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4375"><a href="https://murrietafacialplasticsurgery.com/male-liposuction/">Liposuction</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4372"><a href="https://murrietafacialplasticsurgery.com/male-mole-removal/">Mole Removal</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4371"><a href="https://murrietafacialplasticsurgery.com/male-scar-revision/">Scar Revision</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4370"><a href="https://murrietafacialplasticsurgery.com/male-keloid-removal/">Keloid Removal</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4369"><a href="https://murrietafacialplasticsurgery.com/male-brow-lift/">Brow Lift</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4368"><a href="https://murrietafacialplasticsurgery.com/male-facelift/">Facelift</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4367"><a href="https://murrietafacialplasticsurgery.com/male-rhinoplasty/">Rhinoplasty</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4366"><a href="https://murrietafacialplasticsurgery.com/male-chin-augmentation/">Chin Augmentation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4365"><a href="https://murrietafacialplasticsurgery.com/male-ear-reshaping-surgery/">Ear Reshaping Surgery</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4362"><a href="https://murrietafacialplasticsurgery.com/male-wrinkle-relaxers/">Wrinkle Relaxers</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4361"><a href="https://murrietafacialplasticsurgery.com/male-derma-fillers/">Dermal Fillers</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4360"><a href="https://murrietafacialplasticsurgery.com/male-microdermabrasion/">Microdermabrasion</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359"><a href="https://murrietafacialplasticsurgery.com/male-laser-skin-resurfacing/">Laser Skin Resurfacing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4358"><a href="https://murrietafacialplasticsurgery.com/male-skin-care-regimen/">Skin Care Regimen</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3560"><a href="https://murrietafacialplasticsurgery.com/body/">Body</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3569"><a href="https://murrietafacialplasticsurgery.com/body-contouring/">Body Contouring</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3582"><a href="https://murrietafacialplasticsurgery.com/buttock-augmentation/">Buttock Augmentation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3590"><a href="https://murrietafacialplasticsurgery.com/liposuction/">Liposuction</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3595"><a href="https://murrietafacialplasticsurgery.com/mommy-makeover/">Mommy Makeover</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4976"><a href="https://murrietafacialplasticsurgery.com/scar-revision-b/">Scar Revision</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4977"><a href="https://murrietafacialplasticsurgery.com/mole-removal-b/">Mole Removal</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4978"><a href="https://murrietafacialplasticsurgery.com/body/keloid-removal/">Keloid Removal</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3467"><a href="https://murrietafacialplasticsurgery.com/about-us/">About Us</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3468"><a href="https://murrietafacialplasticsurgery.com/meet-the-doctor/">Meet the Doctor</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4486"><a href="https://murrietafacialplasticsurgery.com/contact/">Contact Us</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3741"><a href="https://murrietafacialplasticsurgery.com/photos-stories/">Photos &amp; Stories</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6004"><a href="https://murrietafacialplasticsurgery.com/bwg_album/before-and-after-photos-of-actual-patients/">Before and After Photos</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3507"><a href="https://murrietafacialplasticsurgery.com/testimonials/">Testimonials</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3508"><a href="https://murrietafacialplasticsurgery.com/reviews/">Reviews</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5935"><a href="tel:951-227-7772">Call Us: <br> (951) 227-7772</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6237"><a href="https://murrietafacialplasticsurgery.com/contact/">Contact Us &gt;&gt;</a></li>
+
+						</ul>
+
+						<ul class="menu secondary-header-items">
+													</ul>
+					</div>
+					
+				</div>
+
+				<div class="bottom-meta-wrap"><ul class="off-canvas-social-links mobile-only"><li><a target="_blank" rel="noopener" href="https://www.facebook.com/MurrietaFacialPlasticSurgery"><span class="screen-reader-text">facebook</span><i class="fa fa-facebook" aria-hidden="true"></i> </a></li><li><a target="_blank" rel="noopener" href="https://www.instagram.com/superplasticsurgeons/"><span class="screen-reader-text">instagram</span><i class="fa fa-instagram" aria-hidden="true"></i> </a></li><li><a href="https://murrietafacialplasticsurgery.com/contact/"><span class="screen-reader-text">phone</span><i class="fa fa-phone" aria-hidden="true"></i> </a></li><li><a href="https://murrietafacialplasticsurgery.com/contact/"><span class="screen-reader-text">email</span><i class="fa fa-envelope" aria-hidden="true"></i> </a></li></ul></div><!--/bottom-meta-wrap--></div> <!--/inner-wrap-->
+				</div><div id="slide-out-widget-area-bg" class="slide-out-from-right dark">
+				</div><a class="slide_out_area_close" href="https://murrietafacialplasticsurgery.com/#"><span class="screen-reader-text">Close Menu</span>
+					<span class="close-wrap"> <span class="close-line close-line1"></span> <span class="close-line close-line2"></span> </span>				</a><!--/ocm-effect-wrap--><script type="text/html" id="wpb-modifications"></script><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0.49803921568627"></fefuncr><fefuncg type="table" tableValues="0 0.49803921568627"></fefuncg><fefuncb type="table" tableValues="0 0.49803921568627"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 0.27843137254902"></fefuncg><fefuncb type="table" tableValues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0"></fefuncr><fefuncg type="table" tableValues="0 0.64705882352941"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.78039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.94901960784314"></fefuncg><fefuncb type="table" tableValues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.098039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.66274509803922"></fefuncg><fefuncb type="table" tableValues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><link rel="stylesheet" id="fancyBox-css" href="./home/jquery.fancybox.css" type="text/css" media="all">
+<link rel="stylesheet" id="nectar-ocm-core-css" href="./home/core.css" type="text/css" media="all">
+<link rel="stylesheet" id="nectar-ocm-slide-out-right-material-css" href="./home/slide-out-right-material.css" type="text/css" media="all">
+<script type="text/javascript" src="./home/anime.min.js.download" id="anime-js"></script>
+<script type="text/javascript" id="nectar-slider-js-extra">
+/* <![CDATA[ */
+var nectar_theme_info = {"using_salient":"true"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./home/nectar-slider.js.download" id="nectar-slider-js"></script>
+<script type="text/javascript" src="./home/jquery.easing.min.js.download" id="jquery-easing-js"></script>
+<script type="text/javascript" src="./home/jquery.mousewheel.min.js.download" id="jquery-mousewheel-js"></script>
+<script type="text/javascript" src="./home/priority.js.download" id="nectar_priority-js"></script>
+<script type="text/javascript" src="./home/nectar-slider-priority.js.download" id="nectar_slider_priority-js"></script>
+<script type="text/javascript" src="./home/transit.min.js.download" id="nectar-transit-js"></script>
+<script type="text/javascript" src="./home/waypoints.js.download" id="nectar-waypoints-js"></script>
+<script type="text/javascript" src="./home/imagesLoaded.min.js.download" id="imagesLoaded-js"></script>
+<script type="text/javascript" src="./home/hoverintent.min.js.download" id="hoverintent-js"></script>
+<script type="text/javascript" src="./home/jquery.fancybox.min.js.download" id="fancyBox-js"></script>
+<script type="text/javascript" src="./home/superfish.js.download" id="superfish-js"></script>
+<script type="text/javascript" id="nectar-frontend-js-extra">
+/* <![CDATA[ */
+var nectarLove = {"ajaxurl":"https:\/\/murrietafacialplasticsurgery.com\/wp-admin\/admin-ajax.php","postID":"3284","rooturl":"https:\/\/murrietafacialplasticsurgery.com","disqusComments":"false","loveNonce":"1cde50b7d0","mapApiKey":""};
+var nectarOptions = {"quick_search":"false","header_entrance":"false","mobile_header_format":"centered-menu","ocm_btn_position":"default","left_header_dropdown_func":"default","ajax_add_to_cart":"0","ocm_remove_ext_menu_items":"remove_images","woo_product_filter_toggle":"0","woo_sidebar_toggles":"true","woo_sticky_sidebar":"0","woo_minimal_product_hover":"default","woo_minimal_product_effect":"default","woo_related_upsell_carousel":"false","woo_product_variable_select":"default"};
+var nectar_front_i18n = {"next":"Next","previous":"Previous"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./home/init.js.download" id="nectar-frontend-js"></script>
+<script type="text/javascript" src="./home/touchswipe.min.js.download" id="touchswipe-js"></script>
+<script type="text/javascript" src="./home/js_composer_front.min.js.download" id="wpb_composer_front_js-js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-72a0e076b7011f1c133","applicationID":"506423534","transactionName":"b1dWMEADVhBVVxAMDFYddQdGC1cNG0QFAgY=","queueTime":0,"applicationTime":744,"atts":"QxBVRggZRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+</body></html>
